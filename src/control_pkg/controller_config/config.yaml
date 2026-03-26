@@ -6,8 +6,7 @@ controller_manager:
       type: joint_state_broadcaster/JointStateBroadcaster
 
     pos_controller:
-      type: forward_command_controller/ForwardCommandController
-
+      type: joint_trajectory_controller/JointTrajectoryController
 
 pos_controller:  
   ros__parameters:
@@ -24,4 +23,11 @@ pos_controller:
     - bl_hip_joint
     - bl_knee_joint
     - bl_thigh_joint
-    interface_name: position
+    command_interfaces: 
+    - position
+    - velocity
+    # - effort
+    state_interfaces:
+    - position
+    - velocity
+    allow_partial_joints_goal: true
