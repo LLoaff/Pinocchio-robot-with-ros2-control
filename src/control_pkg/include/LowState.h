@@ -63,48 +63,10 @@ public:
           _motor_data[i].motorType = MotorType::GO_M8010_6;
         }
       }
-    Eigen::Matrix<float,3,4> getQ();
-    Eigen::Matrix<float,12,1> getQ12();
-    Eigen::Matrix<float,12,1> getW12();
-
-
     MotorData   _motor_data[12];// 接受电机原始数据
     struct Angle_Initialization Angle_Initialization_Variable;
-    float Motor_Init_Angle[12]; // 存储开机时电机初始角度  弧度制
-    float Motor_Angle[12];      // 存储后续所有电机角度    弧度制
-    // float Motor_W[12];          // 存储后续所有电机角速度    弧度制
     Imu         _imu;
 };
-
-Eigen::Matrix<float,3,4> LowState::getQ(){
-  Eigen::Matrix<float,3,4> qLegs;
-  for(int i(0); i < 4; ++i){
-      qLegs.col(i)(0) = Motor_Angle[3*i    ];
-      qLegs.col(i)(1) = Motor_Angle[3*i + 1];
-      qLegs.col(i)(2) = Motor_Angle[3*i + 2];
-  }
-  return qLegs;
-}
-
-Eigen::Matrix<float,12,1> LowState::getQ12(){
-  Eigen::Matrix<float,12,1> qLegs;
-  for(int i(0); i < 4; ++i){
-      qLegs(3*i  ) = Motor_Angle[3*i  ];
-      qLegs(3*i+1) = Motor_Angle[3*i+1];
-      qLegs(3*i+2) = Motor_Angle[3*i+2];
-  }
-  return qLegs;
-}
-
-Eigen::Matrix<float,12,1> LowState::getW12(){
-  Eigen::Matrix<float,12,1> w;
-  for(int i(0); i < 4; ++i){
-      w(3*i  ) = _motor_data[3*i  ].dq ;
-      w(3*i+1) = _motor_data[3*i+1].dq ;
-      w(3*i+2) = _motor_data[3*i+2].dq;
-  }
-  return w;
-}
 
 
 #endif

@@ -33,8 +33,8 @@ public:
 private:
     FSMState         * GetNextState(FSMStateName fsm_state_name);
 
-    ControlComponent * _fsm_ctrlcomponent;
-    FSMStateList      _fsm_state_list;
+    ControlComponent * _fsm_ctrl;
+    FSMStateList       _fsm_state_list;
     FSMState         * _current_state;
     FSMState         * _next_state;
     FSMStateName       _next_state_name; // 下个状态的enum名
@@ -43,15 +43,15 @@ private:
     int                _count;
 };
 
-FSM::FSM(ControlComponent *_ctrlcomp):_fsm_ctrlcomponent(_ctrlcomp)
+FSM::FSM(ControlComponent *_ctrlcomp):_fsm_ctrl(_ctrlcomp)
 {
     _fsm_state_list.invalid     = nullptr;
     _fsm_state_list.passive     = new Passive_State(_ctrlcomp);
     _fsm_state_list.free        = new Free_State(_ctrlcomp);
     _fsm_state_list.stand       = new Stand_State(_ctrlcomp);
     _fsm_state_list.free_stand  = new Free_Stand_State(_ctrlcomp);
-    _fsm_state_list.balance     = new Balance_State(_ctrlcomp,&_fsm_ctrlcomponent->_ctrl_cmd->_state);
-    _fsm_state_list.trotting    = new Trotting_State(_ctrlcomp);
+    // _fsm_state_list.balance     = new Balance_State(_ctrlcomp,&_fsm_ctrl->_ctrl_cmd->_state);
+    // _fsm_state_list.trotting    = new Trotting_State(_ctrlcomp);
 
     initialize();
 }
@@ -67,9 +67,9 @@ void FSM::initialize()
 void FSM::run()
 {
     _start_time = getSystemTime();
-    _fsm_ctrlcomponent->_ctrl_cmd->Update();        // 对电机发送命令
-    _fsm_ctrlcomponent->runWaveGen();
-    _fsm_ctrlcomponent->_estimator->run();
+    _fsm_ctrl->_ioros->upDate();        // 对电机发送命令
+    // _fsm_ctrl->runWaveGen();
+    // _fsm_ctrl->_estimator->run();
     if(_mode == FSMMode::NORMAL)
     {
         _current_state->run();          // 当前 状态执行一次run 
@@ -90,7 +90,7 @@ void FSM::run()
         _mode = FSMMode::NORMAL;
         _current_state->run();
     }
-    absoluteWait(_start_time, (long long)(_fsm_ctrlcomponent->dt * 1000000));       // dt 需初始化时手动赋值
+    absoluteWait(_start_time, (long long)(_fsm_ctrl->dt * 1000000));       // dt 需初始化时手动赋值
 }
 
 FSMState* FSM::GetNextState(FSMStateName fsm_state_name)
@@ -109,8 +109,8 @@ FSMState* FSM::GetNextState(FSMStateName fsm_state_name)
         return _fsm_state_list.stand;
     case FSMStateName::FREE_STAND:
         return _fsm_state_list.free_stand;
-    case FSMStateName::BALANCE :
-        return _fsm_state_list.balance;
+    // case FSMStateName::BALANCE :
+    //     return _fsm_state_list.balance;
     case FSMStateName::TROTTING:
         return _fsm_state_list.trotting;
     default:
@@ -126,8 +126,8 @@ FSM::~FSM()
     delete _fsm_state_list.free;
     delete _fsm_state_list.stand;
     delete _fsm_state_list.free_stand;
-    delete _fsm_state_list.balance;
-    delete _fsm_state_list.trotting;
+    // delete _fsm_state_list.balance;
+    // delete _fsm_state_list.trotting;
 }
 
 

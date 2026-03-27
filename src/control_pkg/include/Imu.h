@@ -35,56 +35,56 @@ private:
 
 Imu::Imu()
 {
-    _serial.init("/dev/ttyS4",
-        1000000 ,
-        itas109::ParityNone,
-        itas109::DataBits8,
-        itas109::StopOne);
-        _serial.close();
-        _serial.open();
+    // _serial.init("/dev/ttyS4",
+    //     1000000 ,
+    //     itas109::ParityNone,
+    //     itas109::DataBits8,
+    //     itas109::StopOne);
+    //     _serial.close();
+    //     _serial.open();
         
-        if(!_serial.isOpen()){
-            printf("open fail--------- \n");
-            _serial.close();
-        }
+    //     if(!_serial.isOpen()){
+    //         printf("open fail--------- \n");
+    //         _serial.close();
+    //     }
 }
 
 void Imu::Imu_Update(){
 
-    uint8_t send_data=0x0a;
-    int counter=10;
-    _serial.writeData(&send_data,1);
-    while(_serial.getReadBufferUsedLen()==0){
-        counter--;
-        if(counter == 0){
-            #ifdef LOWSTATE_DEBUG
-            syslog(LOG_PERROR,"Imu No Rec !!!");
-            #endif
-            // std::cout<< "Imu No Rec !!!"<<std::endl;
-            break;
-        }
-    }
-    if(_serial.getReadBufferUsedLen()>0){
-        _serial.readData(data_buff,42);
-        if(data_buff[0]==0x0a && data_buff[41]==0x0b){
-            memcpy(&quaternion[0], &data_buff[1], 4);
-            memcpy(&quaternion[1], &data_buff[5], 4);
-            memcpy(&quaternion[2], &data_buff[9], 4);
-            memcpy(&quaternion[3], &data_buff[13], 4);
+    // uint8_t send_data=0x0a;
+    // int counter=10;
+    // _serial.writeData(&send_data,1);
+    // while(_serial.getReadBufferUsedLen()==0){
+    //     counter--;
+    //     if(counter == 0){
+    //         #ifdef LOWSTATE_DEBUG
+    //         syslog(LOG_PERROR,"Imu No Rec !!!");
+    //         #endif
+    //         // std::cout<< "Imu No Rec !!!"<<std::endl;
+    //         break;
+    //     }
+    // }
+    // if(_serial.getReadBufferUsedLen()>0){
+    //     _serial.readData(data_buff,42);
+    //     if(data_buff[0]==0x0a && data_buff[41]==0x0b){
+    //         memcpy(&quaternion[0], &data_buff[1], 4);
+    //         memcpy(&quaternion[1], &data_buff[5], 4);
+    //         memcpy(&quaternion[2], &data_buff[9], 4);
+    //         memcpy(&quaternion[3], &data_buff[13], 4);
 
-            memcpy(&accelerometer[0], &data_buff[17], 4);
-            memcpy(&accelerometer[1], &data_buff[21], 4);
-            memcpy(&accelerometer[2], &data_buff[25], 4);
+    //         memcpy(&accelerometer[0], &data_buff[17], 4);
+    //         memcpy(&accelerometer[1], &data_buff[21], 4);
+    //         memcpy(&accelerometer[2], &data_buff[25], 4);
 
-            memcpy(&gyroscope[0], &data_buff[29], 4);
-            memcpy(&gyroscope[1], &data_buff[33], 4);
-            memcpy(&gyroscope[2], &data_buff[37], 4);
-            #ifdef LOWSTATE_DEBUG
-            syslog(LOG_INFO,"imu: q:%.3f %.3f %.3f %.3f - ac:%.3f %.3f %.3f - gy:%.3f %.3f %.3f "
-                ,quaternion[0],quaternion[1],quaternion[2],quaternion[3],accelerometer[0],accelerometer[1],accelerometer[2],gyroscope[0],gyroscope[1],gyroscope[2]);
-            #endif
-        }
-    }
+    //         memcpy(&gyroscope[0], &data_buff[29], 4);
+    //         memcpy(&gyroscope[1], &data_buff[33], 4);
+    //         memcpy(&gyroscope[2], &data_buff[37], 4);
+    //         #ifdef LOWSTATE_DEBUG
+    //         syslog(LOG_INFO,"imu: q:%.3f %.3f %.3f %.3f - ac:%.3f %.3f %.3f - gy:%.3f %.3f %.3f "
+    //             ,quaternion[0],quaternion[1],quaternion[2],quaternion[3],accelerometer[0],accelerometer[1],accelerometer[2],gyroscope[0],gyroscope[1],gyroscope[2]);
+    //         #endif
+    //     }
+    // }
 }
 
 Eigen::Matrix<float,3,3> Imu::GetRotMat(){

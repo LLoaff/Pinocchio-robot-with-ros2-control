@@ -139,37 +139,37 @@ Vec12 Reversal_GetQ(const Vec34 &vecP, FrameType frame){
     return q;
 }
 
-Eigen::Matrix<double,3,3> calcJaco(int legid , Eigen::Matrix<float,3,1> q){
-    Eigen::Matrix<double,3,3> Jac;
-    float l1 = _labad_;
-    float l2 = -_lhip_;
-    float l3 = -_lknee_;
+// Eigen::Matrix<double,3,3> calcJaco(int legid , Eigen::Matrix<float,3,1> q){
+//     Eigen::Matrix<double,3,3> Jac;
+//     float l1 = _labad_;
+//     float l2 = -_lhip_;
+//     float l3 = -_lknee_;
     
-    if(legid == 0 || legid == 2)
-        l1 = -_labad_;
-    // 计算雅可比 
+//     if(legid == 0 || legid == 2)
+//         l1 = -_labad_;
+//     // 计算雅可比 
 
-    float s1 = std::sin(q(0));
-    float s2 = std::sin(q(1));
-    float s3 = std::sin(q(2));
+//     float s1 = std::sin(q(0));
+//     float s2 = std::sin(q(1));
+//     float s3 = std::sin(q(2));
 
-    float c1 = std::cos(q(0));
-    float c2 = std::cos(q(1));
-    float c3 = std::cos(q(2));
+//     float c1 = std::cos(q(0));
+//     float c2 = std::cos(q(1));
+//     float c3 = std::cos(q(2));
 
-    float c23 = c2 * c3 - s2 * s3;
-    float s23 = s2 * c3 + c2 * s3;
-    Jac(0, 0) = 0;
-    Jac(1, 0) = -l3 * c1 * c23 - l2 * c1 * c2 - l1 * s1;
-    Jac(2, 0) = -l3 * s1 * c23 - l2 * c2 * s1 + l1 * c1;
-    Jac(0, 1) = l3 * c23 + l2 * c2;
-    Jac(1, 1) = l3 * s1 * s23 + l2 * s1 * s2;
-    Jac(2, 1) = -l3 * c1 * s23 - l2 * c1 * s2;
-    Jac(0, 2) = l3 * c23;
-    Jac(1, 2) = l3 * s1 * s23;
-    Jac(2, 2) = -l3 * c1 * s23;
-    return Jac;
-}
+//     float c23 = c2 * c3 - s2 * s3;
+//     float s23 = s2 * c3 + c2 * s3;
+//     Jac(0, 0) = 0;
+//     Jac(1, 0) = -l3 * c1 * c23 - l2 * c1 * c2 - l1 * s1;
+//     Jac(2, 0) = -l3 * s1 * c23 - l2 * c2 * s1 + l1 * c1;
+//     Jac(0, 1) = l3 * c23 + l2 * c2;
+//     Jac(1, 1) = l3 * s1 * s23 + l2 * s1 * s2;
+//     Jac(2, 1) = -l3 * c1 * s23 - l2 * c1 * s2;
+//     Jac(0, 2) = l3 * c23;
+//     Jac(1, 2) = l3 * s1 * s23;
+//     Jac(2, 2) = -l3 * c1 * s23;
+//     return Jac;
+// }
 
 Vec3 calcQd(int legid,Vec3 pEe, Vec3 vEe, FrameType frame){
     Vec3 q;

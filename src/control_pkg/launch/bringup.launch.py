@@ -83,6 +83,8 @@ def generate_launch_description():
         arguments=["pos_controller"],
     )
 
+    start_node = 
+
     nodes = [
         control_node,
         robot_state_pub_node,

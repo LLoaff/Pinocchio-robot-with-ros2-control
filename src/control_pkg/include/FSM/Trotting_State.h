@@ -63,7 +63,7 @@ private:
 };
 
 Trotting_State::Trotting_State(ControlComponent * ctrlComp):FSMState(ctrlComp,FSMStateName::TROTTING,"trotting"),
-_est(ctrlComp->_estimator),_phase(ctrlComp->_phase),_contact(ctrlComp->_contact),_robModel(ctrlComp->robotModel),_balCtrl(ctrlComp->balCtrl),_lowstate(&ctrlComp->_ctrl_cmd->_state){
+_est(ctrlComp->_estimator),_phase(ctrlComp->_phase),_contact(ctrlComp->_contact),_robModel(ctrlComp->robotModel),_balCtrl(ctrlComp->balCtrl),_lowstate(&ctrlComp->_ioros->_state){
     _gait = new GaitGenerator(ctrlComp);
     _gaitHeight = 0.06;
 
@@ -95,11 +95,11 @@ void Trotting_State::enter(){
 
 void Trotting_State::exit(){
     // _fsm_state_ctrl_comp->ioInter->zeroCmdPanel(); // 遥控器userValue清零
-    _fsm_state_ctrl_comp->setAllSwing();
+    _fstate_ctrl->setAllSwing();
 }
 
 FSMStateName Trotting_State::CheckChange(){
-    UserValue user = _fsm_state_ctrl_comp->user_cmd->GetUserValue();
+    UserValue user = _fstate_ctrl->user_cmd->GetUserValue();
     if( user == UserValue::PASSIVE)
         return FSMStateName::PASSIVE;
     else if ( user == UserValue::STAND)
@@ -123,10 +123,10 @@ void Trotting_State::run(){
     _dYaw = _lowstate->_imu.getDYaw();
 
 /* 遥控归一 */
-    float ly = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch3 - 1024) / 660.0;
-    float lx = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch2 - 1024) / 660.0;
-    float ry = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch1 - 1024) / 660.0;
-    float rx = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch0 - 1024) / 660.0;
+    float ly = (_fstate_ctrl->user_cmd->R_Data.ch3 - 1024) / 660.0;
+    float lx = (_fstate_ctrl->user_cmd->R_Data.ch2 - 1024) / 660.0;
+    float ry = (_fstate_ctrl->user_cmd->R_Data.ch1 - 1024) / 660.0;
+    float rx = (_fstate_ctrl->user_cmd->R_Data.ch0 - 1024) / 660.0;
     _userValue(0) = ly;
     _userValue(1) = lx;
     _userValue(2) = ry;
@@ -149,9 +149,9 @@ void Trotting_State::run(){
     // std::cout<<"_q:\n"<< _qGoal<< "\n"<<std::endl;
     // std::cout<<"_dq:\n"<< _qdGoal<< "\n"<<std::endl;
     if(checkStepOrNot()){
-        _fsm_state_ctrl_comp->setStartWave();
+        _fstate_ctrl->setStartWave();
     }else{
-        _fsm_state_ctrl_comp->setAllStance();
+        _fstate_ctrl->setAllStance();
     }
     // _fsm_state_ctrl_comp->_ctrl_cmd->SetTau(_tau);
     // _fsm_state_ctrl_comp->_ctrl_cmd->SetQ(vec34ToVec12(_qGoal));
@@ -162,13 +162,13 @@ void Trotting_State::run(){
         if((*_contact)(i) == 0){
             kp<< 2.0 , 2.0 , 3.5;
             kd<< 0.1 , 0.1 , 0.1;
-            // _fsm_state_lowcmd->SetP(i,kp);
-            // _fsm_state_lowcmd->SetD(i,kd);
+            // _fstate_ctrl->SetP(i,kp);
+            // _fstate_ctrl->SetD(i,kd);
         }else{
             kp<< 0.5 , 0.8 , 0.8;
             kd<< 0.1 , 0.1 , 0.1;
-            // _fsm_state_lowcmd->SetP(i,kp);
-            // _fsm_state_lowcmd->SetD(i,kd);
+            // _fstate_ctrl->SetP(i,kp);
+            // _fstate_ctrl->SetD(i,kd);
         }
     }
 }
@@ -223,13 +223,13 @@ void Trotting_State::calcCmd(){
 
     // _pcd(0) + _vCmdGlobal(0) * _fsm_state_ctrl_comp->dt:对速度积分、累加质心位置，算位移
     // 再对位移限幅
-    _pcd(0) = saturation(_pcd(0) + _vCmdGlobal(0) * _fsm_state_ctrl_comp->dt, Vec2(_posBody(0) - 0.05, _posBody(0) + 0.05));
-    _pcd(1) = saturation(_pcd(1) + _vCmdGlobal(1) * _fsm_state_ctrl_comp->dt, Vec2(_posBody(1) - 0.05, _posBody(1) + 0.05));
+    _pcd(0) = saturation(_pcd(0) + _vCmdGlobal(0) * _fstate_ctrl->dt, Vec2(_posBody(0) - 0.05, _posBody(0) + 0.05));
+    _pcd(1) = saturation(_pcd(1) + _vCmdGlobal(1) * _fstate_ctrl->dt, Vec2(_posBody(1) - 0.05, _posBody(1) + 0.05));
 
     _vCmdGlobal(2) = 0;
 
     /* Turning */
-    _yawCmd = _yawCmd + _dYawCmd * _fsm_state_ctrl_comp->dt;// 计算累积角度
+    _yawCmd = _yawCmd + _dYawCmd * _fstate_ctrl->dt;// 计算累积角度
 
     _Rd = rotz(_yawCmd).cast<double>();
     _wCmdGlobal(2) = _dYawCmd;
@@ -266,8 +266,8 @@ void Trotting_State::calcTau(){
     }
 
     _forceFeetBody = _G2B_RotMat * _forceFeetGlobal;
-    _q = vec34ToVec12(_lowstate->getQ()).cast<double>();
-    _tau = _fsm_state_ctrl_comp->getTau(_q.cast<float>(), _forceFeetBody);
+    _q = vec34ToVec12(_fstate_ctrl->_ioros->getQ()).cast<double>();
+    _tau = getTau(_q.cast<float>(), _forceFeetBody);
 }
 
 void Trotting_State::calcQQd(){

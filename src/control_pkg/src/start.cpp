@@ -1,5 +1,4 @@
 #include "rclcpp/rclcpp.hpp"
-#include "LowCmd.h"
 #include "Kenimatics_normal_solution.h"
 #include "Reversal_solution.h"
 #include <syslog.h>
@@ -25,6 +24,7 @@ int main(int argc,char** argv) {
 
 //   setProcessScheduler();
     rclcpp::init(argc,argv);
+    
     ControlComponent * ctrl = new ControlComponent();
     ctrl->dt = 0.002;    
     ctrl->waveGen = new WaveGenerator(0.45, 0.5, Vec4(0, 0.5, 0.5, 0)); // Trot
@@ -34,7 +34,7 @@ int main(int argc,char** argv) {
     FSM * fsm = new FSM(ctrl);
 
 
-    while(true) 
+    while(rclcpp::ok()) 
     {
         fsm->run();
     }

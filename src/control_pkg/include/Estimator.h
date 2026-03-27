@@ -37,8 +37,8 @@ private:
     Eigen::Matrix<double, 18, 1>  _Qdig;    // 过程噪声协方差矩阵 的对角线上的值组成的向量
     Eigen::Matrix<double, 3, 3>   _Cu;      // 输入_u的协方差矩阵
 
-    AvgCov *                      _RCheck;
-    AvgCov *                      _uCheck;
+    // AvgCov *                      _RCheck;
+    // AvgCov *                      _uCheck;
     // 输出的测量数据
     Eigen::Matrix<double, 12, 1>  _feetPos2Body;    // 腿相对与机身的位置 - 在{s}
     Eigen::Matrix<double, 12, 1>  _feetVel2Body;    // 腿相对与机身的速度 - 在{s}

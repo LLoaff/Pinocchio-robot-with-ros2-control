@@ -19,6 +19,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(control_msgs REQUIRED)
 
@@ -27,6 +28,12 @@ add_executable(start src/start.cpp )
 
 include_directories(${PROJECT_SOURCE_DIR}/include
     /usr/local/include/CSerialPort
+)
+
+ament_target_dependencies(start
+  rclcpp
+  trajectory_msgs
+  control_msgs
 )
 
 target_link_libraries(
@@ -39,5 +46,9 @@ quadprog
 
 install(DIRECTORY launch controller_config ros2_control_config rviz_config
 DESTINATION share/${PROJECT_NAME})
+
+install(TARGETS start
+DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()

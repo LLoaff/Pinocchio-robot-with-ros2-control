@@ -53,32 +53,31 @@ void Free_Stand_State::enter(){
     dq<< 0, 0, 0;
     tau<< 0 , 0 ,0;
 
-    _fsm_state_lowcmd->SetP(0,kp);
-    _fsm_state_lowcmd->SetP(1,kp);
-    _fsm_state_lowcmd->SetP(2,b_kp);
-    _fsm_state_lowcmd->SetP(3,b_kp);
+    _fstate_ctrl->_ioros->SetP(0,kp);
+    _fstate_ctrl->_ioros->SetP(1,kp);
+    _fstate_ctrl->_ioros->SetP(2,b_kp);
+    _fstate_ctrl->_ioros->SetP(3,b_kp);
 
-    for(int i=0;i<4;i++)
-    {
-        _fsm_state_lowcmd->SetD(i,kd);
-        _fsm_state_lowcmd->SetDq(i,dq);
-        _fsm_state_lowcmd->SetTau(i,tau);
+    _pb1_pos_b = GetPos_B(0,_fstate_ctrl->_ioros->_state._motor_data[0].q ,_fstate_ctrl->_ioros->_state._motor_data[1].q,_fstate_ctrl->_ioros->_state._motor_data[2].q);
+
+    for(int i=0;i<4;i++){
+        _fstate_ctrl->_ioros->SetD(i,kd);
+        _fstate_ctrl->_ioros->SetDq(i,dq);
+        _fstate_ctrl->_ioros->SetTau(i,tau);
+
+        _pos_s.col(i) = GetPos_S(_pb1_pos_b,i,_fstate_ctrl->_ioros->_state._motor_data[3*i].q,_fstate_ctrl->_ioros->_state._motor_data[3*i+1].q,_fstate_ctrl->_ioros->_state._motor_data[3*i+2].q);
+
     }
-    _pb1_pos_b = GetPos_B(0,_fsm_state_lowstate->Motor_Angle[0],_fsm_state_lowstate->Motor_Angle[1],_fsm_state_lowstate->Motor_Angle[2]);
-    _pos_s.col(0) = GetPos_S(_pb1_pos_b,0,_fsm_state_lowstate->Motor_Angle[0],_fsm_state_lowstate->Motor_Angle[1],_fsm_state_lowstate->Motor_Angle[2]);
-    _pos_s.col(1) = GetPos_S(_pb1_pos_b,1,_fsm_state_lowstate->Motor_Angle[3],_fsm_state_lowstate->Motor_Angle[4],_fsm_state_lowstate->Motor_Angle[5]);
-    _pos_s.col(2) = GetPos_S(_pb1_pos_b,2,_fsm_state_lowstate->Motor_Angle[6],_fsm_state_lowstate->Motor_Angle[7],_fsm_state_lowstate->Motor_Angle[8]);
-    _pos_s.col(3) = GetPos_S(_pb1_pos_b,3,_fsm_state_lowstate->Motor_Angle[9],_fsm_state_lowstate->Motor_Angle[10],_fsm_state_lowstate->Motor_Angle[11]);
 
-    _fsm_state_ctrl_comp->setAllStance();
+    _fstate_ctrl->setAllStance();
 }
 
 void Free_Stand_State::run(){
     /* 遥控归一 */
-    float ly = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch3 - 1024) / 660.0;
-    float lx = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch2 - 1024) / 660.0;
-    float ry = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch1 - 1024) / 660.0;
-    float rx = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch0 - 1024) / 660.0;
+    float ly = (_fstate_ctrl->user_cmd->R_Data.ch3 - 1024) / 660.0;
+    float lx = (_fstate_ctrl->user_cmd->R_Data.ch2 - 1024) / 660.0;
+    float ry = (_fstate_ctrl->user_cmd->R_Data.ch1 - 1024) / 660.0;
+    float rx = (_fstate_ctrl->user_cmd->R_Data.ch0 - 1024) / 660.0;
     
     Eigen::Matrix<float,3,4> q_s = Cal_PosinB(invNormalize(lx,_rowMin,_rowMax),invNormalize(ly,_pitchMin,_pitchMax),
                                             invNormalize(rx,_yawMin,_yawMax),invNormalize(ry,_heightMin,_heightMax));
@@ -97,7 +96,7 @@ void Free_Stand_State::exit(){
 }
 
 FSMStateName Free_Stand_State::CheckChange(){
-    UserValue user = _fsm_state_ctrl_comp->user_cmd->GetUserValue();
+    UserValue user = _fstate_ctrl->user_cmd->GetUserValue();
         if( user == UserValue::PASSIVE)
             return FSMStateName::PASSIVE;
         else if( user == UserValue::STAND)
@@ -146,7 +145,7 @@ void Free_Stand_State::CalQ(Eigen::Matrix<float,3,4> pos){
 
         // printf("id:%d 髋: %.3f , 大: %.3f , 小: %.3f \n",i,cmd_q.col(i)(0)/M_PI*180,cmd_q.col(i)(1)/M_PI*180,cmd_q.col(i)(2)/M_PI*180);
         // syslog(LOG_INFO,"id:%d 小: %.3f , 大: %.3f , 髋: %.3f \n",i,cmd_q.col(i)(0)/M_PI*180,cmd_q.col(i)(1)/M_PI*180,cmd_q.col(i)(2)/M_PI*180);
-        _fsm_state_lowcmd->SetQ(i,cmd_q.col(i));
+        _fstate_ctrl->_ioros->SetQ(i,cmd_q.col(i));
 
     }
     // Eigen::Matrix<float,3,1> position;

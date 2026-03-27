@@ -3,7 +3,6 @@
 
 #include "EnumClassList.h"
 #include "ControlComponent.h"
-#include "LowCmd.h"
 
 class FSMState 
 {
@@ -17,16 +16,12 @@ public:
     FSMStateName      _state_name;
     std::string       _state_string_name;
 protected:
-    ControlComponent *_fsm_state_ctrl_comp;
-    LowCmd           * _fsm_state_lowcmd;
-    LowState         * _fsm_state_lowstate;
+    ControlComponent *_fstate_ctrl;
 };
 
 FSMState::FSMState(ControlComponent *ctrl_comp,FSMStateName fsm_state_name,std::string state_string_name)
-:_fsm_state_ctrl_comp(ctrl_comp),_state_name(fsm_state_name),_state_string_name(state_string_name)
-{
-    _fsm_state_lowcmd = _fsm_state_ctrl_comp->_ctrl_cmd;
-    _fsm_state_lowstate = &(_fsm_state_lowcmd ->getInternalState());
+:_fstate_ctrl(ctrl_comp),_state_name(fsm_state_name),_state_string_name(state_string_name){
+
 }
 
 #endif

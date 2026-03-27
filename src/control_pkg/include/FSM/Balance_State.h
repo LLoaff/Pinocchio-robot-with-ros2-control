@@ -77,8 +77,8 @@ void Balance_State::enter(){
 
     for(int i=0;i<4;i++)
     {
-        _fsm_state_lowcmd->SetP(i,kp);
-        _fsm_state_lowcmd->SetD(i,kd);
+        _fstate_ctrl->_ioros->SetP(i,kp);
+        _fstate_ctrl->_ioros->SetD(i,kd);
     }
 
     _pcdInit = _est->getPosition();
@@ -89,10 +89,10 @@ void Balance_State::enter(){
 
 void Balance_State::run(){
     /* 遥控归一 */
-    float ly = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch3 - 1024) / 660.0;
-    float lx = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch2 - 1024) / 660.0;
-    float ry = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch1 - 1024) / 660.0;
-    float rx = (_fsm_state_ctrl_comp->user_cmd->R_Data.ch0 - 1024) / 660.0;
+    float ly = (_fstate_ctrl->user_cmd->R_Data.ch3 - 1024) / 660.0;
+    float lx = (_fstate_ctrl->user_cmd->R_Data.ch2 - 1024) / 660.0;
+    float ry = (_fstate_ctrl->user_cmd->R_Data.ch1 - 1024) / 660.0;
+    float rx = (_fstate_ctrl->user_cmd->R_Data.ch0 - 1024) / 660.0;
 
     _pcd(0) = _pcdInit(0) + invNormalize(ly, _xMin, _xMax);
     _pcd(1) = _pcdInit(1) - invNormalize(lx, _yMin, _yMax);
@@ -125,7 +125,7 @@ void Balance_State::exit(){
 }
 
 FSMStateName Balance_State::CheckChange(){
-    UserValue user = _fsm_state_ctrl_comp->user_cmd->GetUserValue();
+    UserValue user = _fstate_ctrl->user_cmd->GetUserValue();
     if( user == UserValue::PASSIVE)
         return FSMStateName::PASSIVE;
     else if( user == UserValue::STAND)
@@ -145,10 +145,10 @@ void Balance_State::calcTau(){
     // std::cout << " _forceFeetGlobal: \n" << _forceFeetGlobal << " ===" << std::endl;
     // std::cout << " _forceFeetBody: \n" << vec34ToVec12(_forceFeetBody.cast<float>()) << " \n===" << std::endl;
 
-    _q = vec34ToVec12(_lowstate->getQ());
+    _q = vec34ToVec12(_fstate_ctrl->_ioros->getQ());
     // std::cout << " _q: \n" << _q << " \n===" << std::endl;
 
-    _tau = _fsm_state_ctrl_comp->getTau(_q, _forceFeetBody);
+    _tau = getTau(_q, _forceFeetBody);
     // std::cout << " _tau: \n" << _tau << " \n===" << std::endl;
 
 }

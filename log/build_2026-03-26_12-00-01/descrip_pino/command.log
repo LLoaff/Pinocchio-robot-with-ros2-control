@@ -1,6 +1,0 @@
-Invoking command in '/home/loaf/Pinocchio_ws/build/descrip_pino': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/loaf/Pinocchio_ws/src/descrip_pino -DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/descrip_pino
-Invoked command in '/home/loaf/Pinocchio_ws/build/descrip_pino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/loaf/Pinocchio_ws/src/descrip_pino -DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/descrip_pino
-Invoking command in '/home/loaf/Pinocchio_ws/build/descrip_pino': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/descrip_pino -- -j24 -l24
-Invoked command in '/home/loaf/Pinocchio_ws/build/descrip_pino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/descrip_pino -- -j24 -l24
-Invoking command in '/home/loaf/Pinocchio_ws/build/descrip_pino': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/descrip_pino
-Invoked command in '/home/loaf/Pinocchio_ws/build/descrip_pino' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/descrip_pino

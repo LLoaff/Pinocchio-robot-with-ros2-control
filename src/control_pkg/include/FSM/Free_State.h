@@ -26,30 +26,18 @@ void Free_State::enter()
 
     for(int i=0;i<4;i++)
     {
-        _fsm_state_lowcmd->SetD(i,d);   
-        _fsm_state_lowcmd->SetZeroDq(i);
-        _fsm_state_lowcmd->SetZeroTau(i);
-        _fsm_state_lowcmd->SetZeroP();
-        _fsm_state_lowcmd->SetQ(i,q);
+        _fstate_ctrl->_ioros->SetD(i,d);   
+        _fstate_ctrl->_ioros->SetZeroDq(i);
+        _fstate_ctrl->_ioros->SetZeroTau(i);
+        _fstate_ctrl->_ioros->SetZeroP();
+        _fstate_ctrl->_ioros->SetQ(i,q);
     }
-    _fsm_state_ctrl_comp->setAllSwing();
+    _fstate_ctrl->setAllSwing();
 }
 
 void Free_State::run()
 {
-    // Eigen::Matrix<float,3,3> a;
-    // Eigen::Matrix<float,3,1> b;
-    // Eigen::Matrix<float,3,1> q;
-    // Eigen::Matrix<float,3,1> w;
-    // q<< _fsm_state_lowstate->Motor_Angle[6],_fsm_state_lowstate->Motor_Angle[7],_fsm_state_lowstate->Motor_Angle[8];
-    // w<< _fsm_state_lowstate->_motor_data[6].dq,_fsm_state_lowstate->_motor_data[7].dq,_fsm_state_lowstate->_motor_data[8].dq;
-    // _fsm_state_ctrl_comp->CalTua(2,q,w,a,a,b,b);
-
-    // Eigen::Matrix<float,3,1> pos_w;
-    // pos_w=Pos_Speed(2,_fsm_state_lowstate->Motor_Angle[6],_fsm_state_lowstate->Motor_Angle[7],_fsm_state_lowstate->Motor_Angle[8],
-    //           _fsm_state_lowstate->_motor_data[6].dq,_fsm_state_lowstate->_motor_data[7].dq,_fsm_state_lowstate->_motor_data[8].dq );
-    // syslog(LOG_INFO,"speed: -- x_s:%.6f -- y_s:%.6f -- z_s:%.6f ",pos_w(0), pos_w(1),pos_w(2));
-    // std::cout << "free is run" << std::endl;
+    std::cout << "free is run" << std::endl;
 }
 
 void Free_State::exit()
@@ -59,7 +47,7 @@ void Free_State::exit()
 
 FSMStateName Free_State::CheckChange()
 {
-    UserValue user = _fsm_state_ctrl_comp->user_cmd->GetUserValue();
+    UserValue user = _fstate_ctrl->user_cmd->GetUserValue();
     if( user == UserValue::STAND )
         return FSMStateName::STAND ;
     else if(user == UserValue::FREE)

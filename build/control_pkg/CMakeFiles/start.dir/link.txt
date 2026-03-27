@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/start.dir/src/start.cpp.o -o start  -lUnitreeMotorSDK_Linux64 -lpthread -lcserialport -lquadprog 
