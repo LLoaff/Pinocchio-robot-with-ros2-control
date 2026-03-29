@@ -3,9 +3,10 @@
 
     <ros2_control name="Pino" type="system">
         <hardware>
-          <plugin>mock_components/GenericSystem</plugin>
+          <!-- <plugin>mock_components/GenericSystem</plugin>
           <param name="mock_sensor_commands">true</param>
-          <param name="position_state_following_offset">0.0</param>
+          <param name="position_state_following_offset">0.0</param> -->
+          <plugin>mujoco_ros2_control/MujocoSystemInterface</plugin>
         </hardware>
 
         <joint name="fr_hip_joint">
