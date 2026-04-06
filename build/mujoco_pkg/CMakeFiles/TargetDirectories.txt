@@ -1,0 +1,11 @@
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/uninstall.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/mujoco_pkg_uninstall.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/mj.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/mujoco.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/test.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/edit_cache.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/rebuild_cache.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/list_install_components.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/install.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/install/local.dir
+/home/loaf/Pinocchio_ws/build/mujoco_pkg/CMakeFiles/install/strip.dir

@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "/opt/ros/humble/include/**",
                 "~/Pinocchio_ws/src/control_pkg/include/**",
-                "/usr/include/**"
+                "/usr/include/**",
+                "/opt/mujoco/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

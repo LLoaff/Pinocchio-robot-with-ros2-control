@@ -1,0 +1,24 @@
+[0.008s] Invoking command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/mujoco_pkg -- -j24 -l24
+[0.047s] [ 33%] [32mBuilding CXX object CMakeFiles/mj.dir/src/mj.cc.o[0m
+[1.607s] [ 66%] [32m[1mLinking CXX executable mj[0m
+[1.784s] [100%] Built target mj
+[1.793s] Invoked command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/mujoco_pkg -- -j24 -l24
+[1.793s] Invoking command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/mujoco_pkg
+[1.801s] -- Install configuration: ""
+[1.801s] -- Installing: /home/loaf/Pinocchio_ws/install/mujoco_pkg/lib/mujoco_pkg/mj
+[1.802s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/ament_index/resource_index/package_run_dependencies/mujoco_pkg
+[1.802s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/ament_index/resource_index/parent_prefix_path/mujoco_pkg
+[1.802s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/environment/ament_prefix_path.sh
+[1.802s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/environment/ament_prefix_path.dsv
+[1.802s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/environment/path.sh
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/environment/path.dsv
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/local_setup.bash
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/local_setup.sh
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/local_setup.zsh
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/local_setup.dsv
+[1.803s] -- Installing: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/package.dsv
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/ament_index/resource_index/packages/mujoco_pkg
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/cmake/mujoco_pkgConfig.cmake
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/cmake/mujoco_pkgConfig-version.cmake
+[1.803s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/mujoco_pkg/share/mujoco_pkg/package.xml
+[1.804s] Invoked command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/mujoco_pkg

@@ -1,0 +1,6 @@
+Invoking command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/loaf/Pinocchio_ws/src/mujoco_pkg -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/mujoco_pkg
+Invoked command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/loaf/Pinocchio_ws/src/mujoco_pkg -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/mujoco_pkg
+Invoking command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/mujoco_pkg -- -j24 -l24
+Invoked command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/mujoco_pkg -- -j24 -l24
+Invoking command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/mujoco_pkg
+Invoked command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/mujoco_pkg

@@ -1,0 +1,4 @@
+source;share/descrip_pino/local_setup.bash
+source;share/descrip_pino/local_setup.dsv
+source;share/descrip_pino/local_setup.sh
+source;share/descrip_pino/local_setup.zsh

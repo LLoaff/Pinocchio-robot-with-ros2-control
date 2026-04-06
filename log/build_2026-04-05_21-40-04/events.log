@@ -1,0 +1,395 @@
+[0.000000] (-) TimerEvent: {}
+[0.000109] (control_pkg) JobQueued: {'identifier': 'control_pkg', 'dependencies': OrderedDict()}
+[0.000125] (descrip_pino) JobQueued: {'identifier': 'descrip_pino', 'dependencies': OrderedDict()}
+[0.000134] (mujoco_pkg) JobQueued: {'identifier': 'mujoco_pkg', 'dependencies': OrderedDict()}
+[0.000142] (control_pkg) JobStarted: {'identifier': 'control_pkg'}
+[0.005388] (descrip_pino) JobStarted: {'identifier': 'descrip_pino'}
+[0.007301] (mujoco_pkg) JobStarted: {'identifier': 'mujoco_pkg'}
+[0.009794] (control_pkg) JobProgress: {'identifier': 'control_pkg', 'progress': 'cmake'}
+[0.010094] (control_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/loaf/Pinocchio_ws/src/control_pkg', '-DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/control_pkg'], 'cwd': '/home/loaf/Pinocchio_ws/build/control_pkg', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/control_pkg'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.011865] (descrip_pino) JobProgress: {'identifier': 'descrip_pino', 'progress': 'cmake'}
+[0.012892] (descrip_pino) Command: {'cmd': ['/usr/bin/cmake', '/home/loaf/Pinocchio_ws/src/descrip_pino', '-DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/descrip_pino'], 'cwd': '/home/loaf/Pinocchio_ws/build/descrip_pino', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/descrip_pino'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.014798] (mujoco_pkg) JobProgress: {'identifier': 'mujoco_pkg', 'progress': 'cmake'}
+[0.015191] (mujoco_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/loaf/Pinocchio_ws/src/mujoco_pkg', '-DCMAKE_INSTALL_PREFIX=/home/loaf/Pinocchio_ws/install/mujoco_pkg'], 'cwd': '/home/loaf/Pinocchio_ws/build/mujoco_pkg', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/mujoco_pkg'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.052457] (descrip_pino) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.053343] (control_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.057897] (mujoco_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.089356] (descrip_pino) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.091409] (control_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.092767] (mujoco_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.094375] (descrip_pino) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.095890] (control_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.097730] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099545] (-) TimerEvent: {}
+[0.148569] (control_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.148706] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.148743] (descrip_pino) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.152923] (control_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.152985] (control_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.153053] (mujoco_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.153157] (descrip_pino) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.153212] (control_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.153271] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.153398] (descrip_pino) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.153483] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.153617] (descrip_pino) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.155301] (control_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.155411] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.155479] (descrip_pino) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199660] (-) TimerEvent: {}
+[0.211653] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.211879] (descrip_pino) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.217774] (control_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.217939] (descrip_pino) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.218121] (descrip_pino) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.218297] (mujoco_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.218405] (descrip_pino) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.218481] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.218761] (mujoco_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.219828] (descrip_pino) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.223755] (control_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.223904] (control_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.224181] (control_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.225525] (control_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.227223] (mujoco_pkg) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   \n'}
+[0.227534] (mujoco_pkg) StdoutLine: {'line': b'-- Find mujoco:  , \n'}
+[0.228571] (mujoco_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299748] (-) TimerEvent: {}
+[0.314004] (descrip_pino) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.317617] (control_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.325317] (mujoco_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.369462] (control_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.377524] (mujoco_pkg) StdoutLine: {'line': b'-- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.393686] (control_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.393791] (mujoco_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.396637] (control_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.396711] (mujoco_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.399846] (-) TimerEvent: {}
+[0.401312] (control_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.401383] (mujoco_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.408148] (control_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.408252] (mujoco_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.414735] (descrip_pino) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.415877] (descrip_pino) StdoutLine: {'line': b'-- Generating done\n'}
+[0.416757] (descrip_pino) StdoutLine: {'line': b'-- Build files have been written to: /home/loaf/Pinocchio_ws/build/descrip_pino\n'}
+[0.417499] (control_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.417923] (mujoco_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.419615] (descrip_pino) CommandEnded: {'returncode': 0}
+[0.419978] (descrip_pino) JobProgress: {'identifier': 'descrip_pino', 'progress': 'build'}
+[0.420448] (descrip_pino) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loaf/Pinocchio_ws/build/descrip_pino', '--', '-j24', '-l24'], 'cwd': '/home/loaf/Pinocchio_ws/build/descrip_pino', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/descrip_pino'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.433764] (mujoco_pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.443786] (control_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.445369] (control_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.449238] (descrip_pino) CommandEnded: {'returncode': 0}
+[0.449671] (descrip_pino) JobProgress: {'identifier': 'descrip_pino', 'progress': 'install'}
+[0.452228] (mujoco_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.456705] (descrip_pino) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/loaf/Pinocchio_ws/build/descrip_pino'], 'cwd': '/home/loaf/Pinocchio_ws/build/descrip_pino', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/descrip_pino'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.462406] (descrip_pino) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.462760] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf\n'}
+[0.462866] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/Pino_model.xml\n'}
+[0.462937] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/total.urdf.xacro\n'}
+[0.463003] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes.zip\n'}
+[0.469915] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/Pino.urdf\n'}
+[0.470078] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes\n'}
+[0.470157] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/fr_thigh_Link.stl\n'}
+[0.470253] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/fl_thigh_Link.stl\n'}
+[0.470433] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/bl_thigh_Link.stl\n'}
+[0.470559] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/br_hip_Link.stl\n'}
+[0.472282] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/fr_knee_Link.stl\n'}
+[0.474766] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/fr_hip_Link.stl\n'}
+[0.475387] (mujoco_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.476350] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/base_link.stl\n'}
+[0.477092] (mujoco_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.479838] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/bl_knee_Link.stl\n'}
+[0.482116] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/fl_hip_Link.stl\n'}
+[0.483686] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/fl_knee_Link.stl\n'}
+[0.485766] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/br_thigh_Link.stl\n'}
+[0.485939] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/bl_hip_Link.stl\n'}
+[0.487620] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/urdf/meshes/br_knee_Link.stl\n'}
+[0.489815] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/launch\n'}
+[0.489947] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/launch/description.launch.py\n'}
+[0.490019] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/config\n'}
+[0.490051] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/config/rviz.rviz\n'}
+[0.490102] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/ament_index/resource_index/package_run_dependencies/descrip_pino\n'}
+[0.490153] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/ament_index/resource_index/parent_prefix_path/descrip_pino\n'}
+[0.490196] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/environment/ament_prefix_path.sh\n'}
+[0.490223] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/environment/ament_prefix_path.dsv\n'}
+[0.490273] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/environment/path.sh\n'}
+[0.490318] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/environment/path.dsv\n'}
+[0.490345] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/local_setup.bash\n'}
+[0.490389] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/local_setup.sh\n'}
+[0.490436] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/local_setup.zsh\n'}
+[0.490488] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/local_setup.dsv\n'}
+[0.490529] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/package.dsv\n'}
+[0.490587] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/ament_index/resource_index/packages/descrip_pino\n'}
+[0.490660] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/cmake/descrip_pinoConfig.cmake\n'}
+[0.490700] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/cmake/descrip_pinoConfig-version.cmake\n'}
+[0.490738] (descrip_pino) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/descrip_pino/share/descrip_pino/package.xml\n'}
+[0.491954] (descrip_pino) CommandEnded: {'returncode': 0}
+[0.500017] (-) TimerEvent: {}
+[0.501893] (descrip_pino) JobEnded: {'identifier': 'descrip_pino', 'rc': 0}
+[0.506204] (control_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.525572] (control_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.540608] (mujoco_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.554112] (control_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.559116] (control_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.561900] (mujoco_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.589290] (mujoco_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.593968] (mujoco_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.600153] (-) TimerEvent: {}
+[0.611928] (control_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.612062] (control_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.650800] (mujoco_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.650951] (mujoco_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.666549] (control_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.667339] (control_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.697435] (control_pkg) StdoutLine: {'line': b'-- Found trajectory_msgs: 4.9.1 (/opt/ros/humble/share/trajectory_msgs/cmake)\n'}
+[0.700219] (-) TimerEvent: {}
+[0.704579] (mujoco_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.705658] (mujoco_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.715747] (control_pkg) StdoutLine: {'line': b'-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[0.770270] (mujoco_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.775146] (mujoco_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[0.777099] (mujoco_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/loaf/Pinocchio_ws/build/mujoco_pkg\n'}
+[0.783017] (mujoco_pkg) CommandEnded: {'returncode': 0}
+[0.784185] (mujoco_pkg) JobProgress: {'identifier': 'mujoco_pkg', 'progress': 'build'}
+[0.784202] (mujoco_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loaf/Pinocchio_ws/build/mujoco_pkg', '--', '-j24', '-l24'], 'cwd': '/home/loaf/Pinocchio_ws/build/mujoco_pkg', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/mujoco_pkg'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.795969] (control_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.800401] (-) TimerEvent: {}
+[0.801666] (control_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[0.803791] (control_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/loaf/Pinocchio_ws/build/control_pkg\n'}
+[0.811109] (control_pkg) CommandEnded: {'returncode': 0}
+[0.811678] (control_pkg) JobProgress: {'identifier': 'control_pkg', 'progress': 'build'}
+[0.811693] (control_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loaf/Pinocchio_ws/build/control_pkg', '--', '-j24', '-l24'], 'cwd': '/home/loaf/Pinocchio_ws/build/control_pkg', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/loaf/Pinocchio_ws/src'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-13149-36495.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1710'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1710,unix/loaf:/tmp/.ICE-unix/1710'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco/mujoco-3.5.1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3de9b433_3b46_4a4a_91ae_10bd7c52e27f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/0fe769c3570414ff95480c6d1ae9eaa0/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-8c28b7a303.sock'), ('GNOME_TERMINAL_SERVICE', ':1.132'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:36495'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/control_pkg'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=ca6809c347bf6f921df48edd69d1eb6f'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/home/loaf/Pinocchio_ws/install/control_pkg:/opt/ros/humble')]), 'shell': False}
+[0.816313] (mujoco_pkg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/mj.dir/src/mj.cc.o\x1b[0m\n'}
+[0.817274] (mujoco_pkg) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/mj.dir/src/ioros.cpp.o\x1b[0m\n'}
+[0.842966] (control_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/start.dir/src/start.cpp.o\x1b[0m\n'}
+[0.900601] (-) TimerEvent: {}
+[1.000901] (-) TimerEvent: {}
+[1.101220] (-) TimerEvent: {}
+[1.201479] (-) TimerEvent: {}
+[1.301808] (-) TimerEvent: {}
+[1.402073] (-) TimerEvent: {}
+[1.502406] (-) TimerEvent: {}
+[1.602638] (-) TimerEvent: {}
+[1.702886] (-) TimerEvent: {}
+[1.803141] (-) TimerEvent: {}
+[1.903419] (-) TimerEvent: {}
+[2.003677] (-) TimerEvent: {}
+[2.103940] (-) TimerEvent: {}
+[2.204194] (-) TimerEvent: {}
+[2.304545] (-) TimerEvent: {}
+[2.404868] (-) TimerEvent: {}
+[2.505181] (-) TimerEvent: {}
+[2.605567] (-) TimerEvent: {}
+[2.705812] (-) TimerEvent: {}
+[2.806135] (-) TimerEvent: {}
+[2.906448] (-) TimerEvent: {}
+[3.006717] (-) TimerEvent: {}
+[3.106960] (-) TimerEvent: {}
+[3.111567] (mujoco_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mj\x1b[0m\n'}
+[3.207085] (-) TimerEvent: {}
+[3.210874] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `mouse_button(GLFWwindow*, int, int, int)':\n"}
+[3.211149] (mujoco_pkg) StderrLine: {'line': b"mj.cc:(.text+0x87): undefined reference to `glfwGetMouseButton'\n"}
+[3.211236] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0xa4): undefined reference to `glfwGetMouseButton'\n"}
+[3.211324] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0xc1): undefined reference to `glfwGetMouseButton'\n"}
+[3.211388] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0xea): undefined reference to `glfwGetCursorPos'\n"}
+[3.211452] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `mouse_move(GLFWwindow*, double, double)':\n"}
+[3.211519] (mujoco_pkg) StderrLine: {'line': b"mj.cc:(.text+0x1a1): undefined reference to `glfwGetWindowSize'\n"}
+[3.211587] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x1b2): undefined reference to `glfwGetKey'\n"}
+[3.211653] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x1c8): undefined reference to `glfwGetKey'\n"}
+[3.211723] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `initial()':\n"}
+[3.211792] (mujoco_pkg) StderrLine: {'line': b"mj.cc:(.text+0x3e3): undefined reference to `glfwInit'\n"}
+[3.211855] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x424): undefined reference to `glfwCreateWindow'\n"}
+[3.211913] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x43a): undefined reference to `glfwMakeContextCurrent'\n"}
+[3.211971] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x444): undefined reference to `glfwSwapInterval'\n"}
+[3.212029] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x4d5): undefined reference to `glfwSetKeyCallback'\n"}
+[3.212091] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x4ee): undefined reference to `glfwSetCursorPosCallback'\n"}
+[3.212154] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x507): undefined reference to `glfwSetMouseButtonCallback'\n"}
+[3.212217] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0x520): undefined reference to `glfwSetScrollCallback'\n"}
+[3.212287] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `main':\n"}
+[3.212355] (mujoco_pkg) StderrLine: {'line': b"mj.cc:(.text+0xbae): undefined reference to `glfwGetFramebufferSize'\n"}
+[3.212419] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0xc26): undefined reference to `glfwSwapBuffers'\n"}
+[3.212481] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0xc2b): undefined reference to `glfwPollEvents'\n"}
+[3.212544] (mujoco_pkg) StderrLine: {'line': b"/usr/bin/ld: mj.cc:(.text+0xc66): undefined reference to `glfwWindowShouldClose'\n"}
+[3.220410] (mujoco_pkg) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[3.221690] (mujoco_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/mj.dir/build.make:192\xef\xbc\x9amj] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[3.221962] (mujoco_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/mj.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[3.222181] (mujoco_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[3.223806] (mujoco_pkg) CommandEnded: {'returncode': 2}
+[3.226608] (mujoco_pkg) JobEnded: {'identifier': 'mujoco_pkg', 'rc': 2}
+[3.307210] (-) TimerEvent: {}
+[3.407609] (-) TimerEvent: {}
+[3.507884] (-) TimerEvent: {}
+[3.608189] (-) TimerEvent: {}
+[3.708481] (-) TimerEvent: {}
+[3.808720] (-) TimerEvent: {}
+[3.908962] (-) TimerEvent: {}
+[4.009208] (-) TimerEvent: {}
+[4.109459] (-) TimerEvent: {}
+[4.209789] (-) TimerEvent: {}
+[4.310017] (-) TimerEvent: {}
+[4.410375] (-) TimerEvent: {}
+[4.510683] (-) TimerEvent: {}
+[4.610928] (-) TimerEvent: {}
+[4.711168] (-) TimerEvent: {}
+[4.811496] (-) TimerEvent: {}
+[4.911805] (-) TimerEvent: {}
+[5.012101] (-) TimerEvent: {}
+[5.112387] (-) TimerEvent: {}
+[5.212689] (-) TimerEvent: {}
+[5.313082] (-) TimerEvent: {}
+[5.413410] (-) TimerEvent: {}
+[5.513696] (-) TimerEvent: {}
+[5.613986] (-) TimerEvent: {}
+[5.714353] (-) TimerEvent: {}
+[5.814578] (-) TimerEvent: {}
+[5.914827] (-) TimerEvent: {}
+[6.015077] (-) TimerEvent: {}
+[6.115342] (-) TimerEvent: {}
+[6.215671] (-) TimerEvent: {}
+[6.315981] (-) TimerEvent: {}
+[6.416340] (-) TimerEvent: {}
+[6.516558] (-) TimerEvent: {}
+[6.616825] (-) TimerEvent: {}
+[6.717069] (-) TimerEvent: {}
+[6.817380] (-) TimerEvent: {}
+[6.917657] (-) TimerEvent: {}
+[7.017996] (-) TimerEvent: {}
+[7.118242] (-) TimerEvent: {}
+[7.218474] (-) TimerEvent: {}
+[7.318790] (-) TimerEvent: {}
+[7.419019] (-) TimerEvent: {}
+[7.519316] (-) TimerEvent: {}
+[7.619533] (-) TimerEvent: {}
+[7.719780] (-) TimerEvent: {}
+[7.820020] (-) TimerEvent: {}
+[7.920334] (-) TimerEvent: {}
+[8.020562] (-) TimerEvent: {}
+[8.120801] (-) TimerEvent: {}
+[8.221040] (-) TimerEvent: {}
+[8.321363] (-) TimerEvent: {}
+[8.421668] (-) TimerEvent: {}
+[8.521887] (-) TimerEvent: {}
+[8.622128] (-) TimerEvent: {}
+[8.722306] (-) TimerEvent: {}
+[8.822519] (-) TimerEvent: {}
+[8.922773] (-) TimerEvent: {}
+[9.023005] (-) TimerEvent: {}
+[9.123415] (-) TimerEvent: {}
+[9.223789] (-) TimerEvent: {}
+[9.324170] (-) TimerEvent: {}
+[9.424459] (-) TimerEvent: {}
+[9.524757] (-) TimerEvent: {}
+[9.625061] (-) TimerEvent: {}
+[9.725404] (-) TimerEvent: {}
+[9.825788] (-) TimerEvent: {}
+[9.926101] (-) TimerEvent: {}
+[10.026394] (-) TimerEvent: {}
+[10.126635] (-) TimerEvent: {}
+[10.226904] (-) TimerEvent: {}
+[10.327141] (-) TimerEvent: {}
+[10.427477] (-) TimerEvent: {}
+[10.527705] (-) TimerEvent: {}
+[10.627975] (-) TimerEvent: {}
+[10.728187] (-) TimerEvent: {}
+[10.828426] (-) TimerEvent: {}
+[10.928643] (-) TimerEvent: {}
+[11.028859] (-) TimerEvent: {}
+[11.129172] (-) TimerEvent: {}
+[11.229604] (-) TimerEvent: {}
+[11.329963] (-) TimerEvent: {}
+[11.430462] (-) TimerEvent: {}
+[11.530901] (-) TimerEvent: {}
+[11.631339] (-) TimerEvent: {}
+[11.731554] (-) TimerEvent: {}
+[11.831994] (-) TimerEvent: {}
+[11.932456] (-) TimerEvent: {}
+[12.032704] (-) TimerEvent: {}
+[12.132931] (-) TimerEvent: {}
+[12.233173] (-) TimerEvent: {}
+[12.333417] (-) TimerEvent: {}
+[12.433636] (-) TimerEvent: {}
+[12.533852] (-) TimerEvent: {}
+[12.634095] (-) TimerEvent: {}
+[12.734350] (-) TimerEvent: {}
+[12.834583] (-) TimerEvent: {}
+[12.934886] (-) TimerEvent: {}
+[13.035193] (-) TimerEvent: {}
+[13.135516] (-) TimerEvent: {}
+[13.235766] (-) TimerEvent: {}
+[13.336067] (-) TimerEvent: {}
+[13.436302] (-) TimerEvent: {}
+[13.536520] (-) TimerEvent: {}
+[13.636752] (-) TimerEvent: {}
+[13.737048] (-) TimerEvent: {}
+[13.837286] (-) TimerEvent: {}
+[13.937499] (-) TimerEvent: {}
+[14.037786] (-) TimerEvent: {}
+[14.138077] (-) TimerEvent: {}
+[14.238371] (-) TimerEvent: {}
+[14.338662] (-) TimerEvent: {}
+[14.438959] (-) TimerEvent: {}
+[14.539245] (-) TimerEvent: {}
+[14.639473] (-) TimerEvent: {}
+[14.739701] (-) TimerEvent: {}
+[14.840011] (-) TimerEvent: {}
+[14.940321] (-) TimerEvent: {}
+[15.040532] (-) TimerEvent: {}
+[15.140833] (-) TimerEvent: {}
+[15.241125] (-) TimerEvent: {}
+[15.341421] (-) TimerEvent: {}
+[15.441628] (-) TimerEvent: {}
+[15.541915] (-) TimerEvent: {}
+[15.642203] (-) TimerEvent: {}
+[15.742536] (-) TimerEvent: {}
+[15.842817] (-) TimerEvent: {}
+[15.943045] (-) TimerEvent: {}
+[16.043341] (-) TimerEvent: {}
+[16.143640] (-) TimerEvent: {}
+[16.243990] (-) TimerEvent: {}
+[16.344227] (-) TimerEvent: {}
+[16.444449] (-) TimerEvent: {}
+[16.544675] (-) TimerEvent: {}
+[16.644900] (-) TimerEvent: {}
+[16.745191] (-) TimerEvent: {}
+[16.845505] (-) TimerEvent: {}
+[16.945712] (-) TimerEvent: {}
+[17.045941] (-) TimerEvent: {}
+[17.146226] (-) TimerEvent: {}
+[17.246465] (-) TimerEvent: {}
+[17.346743] (-) TimerEvent: {}
+[17.447026] (-) TimerEvent: {}
+[17.547356] (-) TimerEvent: {}
+[17.647566] (-) TimerEvent: {}
+[17.747828] (-) TimerEvent: {}
+[17.848112] (-) TimerEvent: {}
+[17.948457] (-) TimerEvent: {}
+[18.048713] (-) TimerEvent: {}
+[18.148952] (-) TimerEvent: {}
+[18.249257] (-) TimerEvent: {}
+[18.349472] (-) TimerEvent: {}
+[18.449772] (-) TimerEvent: {}
+[18.550059] (-) TimerEvent: {}
+[18.650394] (-) TimerEvent: {}
+[18.750706] (-) TimerEvent: {}
+[18.850998] (-) TimerEvent: {}
+[18.951302] (-) TimerEvent: {}
+[19.051526] (-) TimerEvent: {}
+[19.151770] (-) TimerEvent: {}
+[19.252006] (-) TimerEvent: {}
+[19.352234] (-) TimerEvent: {}
+[19.452529] (-) TimerEvent: {}
+[19.552776] (-) TimerEvent: {}
+[19.653033] (-) TimerEvent: {}
+[19.713168] (control_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable start\x1b[0m\n'}
+[19.753232] (-) TimerEvent: {}
+[19.853571] (-) TimerEvent: {}
+[19.953876] (-) TimerEvent: {}
+[20.054202] (-) TimerEvent: {}
+[20.154511] (-) TimerEvent: {}
+[20.254821] (-) TimerEvent: {}
+[20.355038] (-) TimerEvent: {}
+[20.412870] (control_pkg) StdoutLine: {'line': b'[100%] Built target start\n'}
+[20.419671] (control_pkg) JobEnded: {'identifier': 'control_pkg', 'rc': 'SIGINT'}
+[20.430081] (-) EventReactorShutdown: {}

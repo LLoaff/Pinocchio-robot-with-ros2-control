@@ -1,0 +1,12 @@
+[0.008s] Invoking command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/mujoco_pkg -- -j24 -l24
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target mujoco[0m
+[0.049s] [ 60%] Built target mj
+[0.049s] [ 80%] [32mBuilding CXX object CMakeFiles/mujoco.dir/src/mujoco.cpp.o[0m
+[1.373s] [01m[K/home/loaf/Pinocchio_ws/src/mujoco_pkg/src/mujoco.cpp:[m[K In function ‘[01m[Kvoid initial()[m[K’:
+[1.373s] [01m[K/home/loaf/Pinocchio_ws/src/mujoco_pkg/src/mujoco.cpp:113:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kkeyboard[m[K’ was not declared in this scope
+[1.373s]   113 |   glfwSetKeyCallback(window, [01;31m[Kkeyboard[m[K);
+[1.373s]       |                              [01;31m[K^~~~~~~~[m[K
+[1.764s] gmake[2]: *** [CMakeFiles/mujoco.dir/build.make:76：CMakeFiles/mujoco.dir/src/mujoco.cpp.o] 错误 1
+[1.764s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/mujoco.dir/all] 错误 2
+[1.764s] gmake: *** [Makefile:146：all] 错误 2
+[1.766s] Invoked command in '/home/loaf/Pinocchio_ws/build/mujoco_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/mujoco_pkg -- -j24 -l24

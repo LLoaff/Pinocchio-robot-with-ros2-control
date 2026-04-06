@@ -1,0 +1,27 @@
+/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `mouse_button(GLFWwindow*, int, int, int)':
+mj.cc:(.text+0x87): undefined reference to `glfwGetMouseButton'
+/usr/bin/ld: mj.cc:(.text+0xa4): undefined reference to `glfwGetMouseButton'
+/usr/bin/ld: mj.cc:(.text+0xc1): undefined reference to `glfwGetMouseButton'
+/usr/bin/ld: mj.cc:(.text+0xea): undefined reference to `glfwGetCursorPos'
+/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `mouse_move(GLFWwindow*, double, double)':
+mj.cc:(.text+0x1a1): undefined reference to `glfwGetWindowSize'
+/usr/bin/ld: mj.cc:(.text+0x1b2): undefined reference to `glfwGetKey'
+/usr/bin/ld: mj.cc:(.text+0x1c8): undefined reference to `glfwGetKey'
+/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `initial()':
+mj.cc:(.text+0x3e3): undefined reference to `glfwInit'
+/usr/bin/ld: mj.cc:(.text+0x424): undefined reference to `glfwCreateWindow'
+/usr/bin/ld: mj.cc:(.text+0x43a): undefined reference to `glfwMakeContextCurrent'
+/usr/bin/ld: mj.cc:(.text+0x444): undefined reference to `glfwSwapInterval'
+/usr/bin/ld: mj.cc:(.text+0x4d5): undefined reference to `glfwSetKeyCallback'
+/usr/bin/ld: mj.cc:(.text+0x4ee): undefined reference to `glfwSetCursorPosCallback'
+/usr/bin/ld: mj.cc:(.text+0x507): undefined reference to `glfwSetMouseButtonCallback'
+/usr/bin/ld: mj.cc:(.text+0x520): undefined reference to `glfwSetScrollCallback'
+/usr/bin/ld: CMakeFiles/mj.dir/src/mj.cc.o: in function `main':
+mj.cc:(.text+0xbae): undefined reference to `glfwGetFramebufferSize'
+/usr/bin/ld: mj.cc:(.text+0xc26): undefined reference to `glfwSwapBuffers'
+/usr/bin/ld: mj.cc:(.text+0xc2b): undefined reference to `glfwPollEvents'
+/usr/bin/ld: mj.cc:(.text+0xc66): undefined reference to `glfwWindowShouldClose'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/mj.dir/build.make:192：mj] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/mj.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

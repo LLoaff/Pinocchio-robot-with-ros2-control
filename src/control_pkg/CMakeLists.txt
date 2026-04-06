@@ -39,7 +39,6 @@ ament_target_dependencies(start
 target_link_libraries(
 start
 UnitreeMotorSDK_Linux64
-pthread
 cserialport
 quadprog
 )

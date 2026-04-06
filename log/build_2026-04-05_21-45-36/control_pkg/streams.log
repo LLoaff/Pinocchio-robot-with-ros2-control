@@ -1,0 +1,48 @@
+[0.012s] Invoking command in '/home/loaf/Pinocchio_ws/build/control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24
+[0.035s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.131s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.161s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.163s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.171s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.184s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.195s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.224s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.225s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.301s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.342s] -- Found trajectory_msgs: 4.9.1 (/opt/ros/humble/share/trajectory_msgs/cmake)
+[0.364s] -- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)
+[0.459s] -- Configuring done
+[0.466s] -- Generating done
+[0.468s] -- Build files have been written to: /home/loaf/Pinocchio_ws/build/control_pkg
+[0.488s] [35m[1mConsolidate compiler generated dependencies of target start[0m
+[0.501s] [ 50%] [32m[1mLinking CXX executable start[0m
+[1.292s] [100%] Built target start
+[1.300s] Invoked command in '/home/loaf/Pinocchio_ws/build/control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24
+[1.301s] Invoking command in '/home/loaf/Pinocchio_ws/build/control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/control_pkg
+[1.306s] -- Install configuration: ""
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/launch
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/launch/bringup.launch.py
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/controller_config
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/controller_config/config.yaml
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/ros2_control_config
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/ros2_control_config/control.ros2_control.xacro
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/rviz_config
+[1.306s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/rviz_config/rviz.rviz
+[1.307s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/lib/control_pkg/start
+[1.312s] -- Set runtime path of "/home/loaf/Pinocchio_ws/install/control_pkg/lib/control_pkg/start" to ""
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/ament_index/resource_index/package_run_dependencies/control_pkg
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/ament_index/resource_index/parent_prefix_path/control_pkg
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/ament_prefix_path.sh
+[1.313s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/ament_prefix_path.dsv
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/path.sh
+[1.313s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/path.dsv
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.bash
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.sh
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.zsh
+[1.313s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.dsv
+[1.313s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/package.dsv
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/ament_index/resource_index/packages/control_pkg
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/cmake/control_pkgConfig.cmake
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/cmake/control_pkgConfig-version.cmake
+[1.313s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/package.xml
+[1.314s] Invoked command in '/home/loaf/Pinocchio_ws/build/control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/control_pkg
