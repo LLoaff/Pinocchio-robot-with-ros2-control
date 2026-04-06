@@ -1,9 +1,12 @@
 controller_manager:
   ros__parameters:
-    update_rate: 100  # Hz
+    update_rate: 200  # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
+
+    imu_sensor_broadcaster:
+      type: imu_sensor_broadcaster/IMUSensorBroadcaster
 
     pos_controller:
       type: joint_trajectory_controller/JointTrajectoryController
@@ -31,4 +34,8 @@ pos_controller:
     - position
     - velocity
     allow_partial_joints_goal: true
-    hold_joints: true
+
+imu_sensor_broadcaster:
+  ros__parameters:
+    sensor_name: imu_sensor
+    frame_id: base_link

@@ -18,19 +18,19 @@ float Radian2Angle(float radian)// 弧度转角度
 
 struct Angle_Initialization     // 手动标定电机角度
 {
-  float Right_Front_Calf_Angle_Init_Value = -2.4569;
+  float Right_Front_Calf_Angle_Init_Value = -2.44;
   float Right_Front_Thigh_Angle_Init_Value = 0.88;
   float Right_Front_Hip_Angle_Init_Value = -0.61;
 
-  float Left_Front_Calf_Angle_Init_Value = -2.4569;
+  float Left_Front_Calf_Angle_Init_Value = -2.44;
   float Left_Front_Thigh_Angle_Init_Value = 0.88;
   float Left_Front_Hip_Angle_Init_Value = 0.61;
 
-  float Right_Back_Calf_Angle_Init_Value = -2.4569;
+  float Right_Back_Calf_Angle_Init_Value = -2.44;
   float Right_Back_Thigh_Angle_Init_Value = 0.88;
   float Right_Back_Hip_Angle_Init_Value = -0.61;
 
-  float Left_Back_Calf_Angle_Init_Value = -2.4569;
+  float Left_Back_Calf_Angle_Init_Value = -2.44;
   float Left_Back_Thigh_Angle_Init_Value = 0.88;
   float Left_Back_Hip_Angle_Init_Value = 0.61;
 };
@@ -41,23 +41,6 @@ public:
   
     LowState()
       {
-        
-        Angle_Initialization_Variable.Left_Front_Calf_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Left_Front_Calf_Angle_Init_Value);
-        Angle_Initialization_Variable.Left_Front_Thigh_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Left_Front_Thigh_Angle_Init_Value);
-        Angle_Initialization_Variable.Left_Front_Hip_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Left_Front_Hip_Angle_Init_Value);
-    
-        Angle_Initialization_Variable.Right_Front_Calf_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Right_Front_Calf_Angle_Init_Value);
-        Angle_Initialization_Variable.Right_Front_Thigh_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Right_Front_Thigh_Angle_Init_Value);
-        Angle_Initialization_Variable.Right_Front_Hip_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Right_Front_Hip_Angle_Init_Value);
-
-        Angle_Initialization_Variable.Left_Back_Calf_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Left_Back_Calf_Angle_Init_Value);
-        Angle_Initialization_Variable.Left_Back_Thigh_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Left_Back_Thigh_Angle_Init_Value);
-        Angle_Initialization_Variable.Left_Back_Hip_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Left_Back_Hip_Angle_Init_Value);
-
-        Angle_Initialization_Variable.Right_Back_Calf_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Right_Back_Calf_Angle_Init_Value);
-        Angle_Initialization_Variable.Right_Back_Thigh_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Right_Back_Thigh_Angle_Init_Value);
-        Angle_Initialization_Variable.Right_Back_Hip_Angle_Init_Value = Angle2Radian(Angle_Initialization_Variable.Right_Back_Hip_Angle_Init_Value);
-
         for(uint8_t i=0 ; i<12; i++)
         {
           _motor_data[i].motorType = MotorType::GO_M8010_6;

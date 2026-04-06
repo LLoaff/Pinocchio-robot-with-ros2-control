@@ -8,12 +8,24 @@
     <child link="base_link"/>
     <origin xyz="0 0 0.15" rpy = "0 0 0"/>
   </joint> -->
-  <mujoco>
+  <!-- <mujoco>
         <keyframe>
         <key name="init_pose" 
         qpos="0 0 0.072 1 0 0 0    -0.61 0.88 -2.4569    0.61 0.88 -2.4569    -0.61 0.88 -2.4569    0.61 0.88 -2.4569" />
         </keyframe>
-  </mujoco>
+
+        <worldbody>
+          <body name="base_link">
+            <site name="imu_sensor" pos="0 0 0" rpy="0 0 0" />
+          </body>
+        </worldbody>
+
+        <sensor>
+          <framequat name="imu_sensor_quat" objtype="site" objname="imu_sensor" />
+          <gyro name="imu_sensor_gyro" site="imu_sensor" />
+          <accelerometer name="imu_sensor_accel" site="imu_sensor" />
+        </sensor>
+  </mujoco> -->
 
   <link
     name="base_link">

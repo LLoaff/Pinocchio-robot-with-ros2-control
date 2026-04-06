@@ -38,7 +38,7 @@
     <camera name="track_body" mode="targetbody" target="root" pos="0 -3.0 0.6" xyaxes="1 0 0 0 0 1"  />
     <body name="root" pos="0 0 0.43969776660575016" quat="1 0 0 0">
       <freejoint name="root" />
-      <site name="imu" size="0.01" pos="0 0 0" euler="0 0 0"/>
+      <site name="imu_sensor" size="0.01" pos="0 0 0" euler="0 0 0"/>
       <geom type="mesh" rgba="1 0.513726 0.835294 1" mesh="base_link" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
       <geom type="mesh" rgba="1 0.513726 0.835294 1" mesh="base_link" />
       <body name="fr_hip_Link" pos="0.16425 -0.056271 0.0065998" quat="1 0 0 -9.5735e-05">
@@ -128,7 +128,7 @@
        后续的值 [7...]: 你的各个转动关节的角度 (单位：弧度)
     -->
     <key name="init_pose" 
-         qpos="0 0 0.072 1 0 0 0    -0.61 0.88 -2.4569    0.61 0.88 -2.4569    -0.61 0.88 -2.4569    0.61 0.88 -2.4569" />
+         qpos="0 0 0.072 1 0 0 0    -0.61 0.88 -2.44    0.61 0.88 -2.44    -0.61 0.88 -2.44    0.61 0.88 -2.44" />
   </keyframe>
 
   <actuator>
@@ -183,9 +183,9 @@
     <actuatorpos name="bl_thigh_joint_p" actuator="bl_thigh_joint" />
     <actuatorvel name="bl_thigh_joint_v" actuator="bl_thigh_joint" />
     <actuatorfrc name="bl_thigh_joint_f" actuator="bl_thigh_joint" noise="0.001" /> -->
-    <framequat name="orientation" objtype="site" noise="0.001" objname="imu" />
-    <gyro name="gyro" site="imu" noise="0.005" cutoff="34.9" />
-    <accelerometer name="acc" site="imu"/> 
+    <framequat name="imu_sensor_quat" objtype="site" noise="0.001" objname="imu_sensor" />
+    <gyro name="imu_sensor_gyro" site="imu_sensor" noise="0.005" cutoff="34.9" />
+    <accelerometer name="imu_sensor_accel" site="imu_sensor"/> 
   </sensor>
 
 </mujoco>

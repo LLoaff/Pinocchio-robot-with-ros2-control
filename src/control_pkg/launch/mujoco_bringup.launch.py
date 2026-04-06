@@ -74,7 +74,11 @@ def generate_launch_description():
         executable="spawner",
         arguments=["joint_state_broadcaster", "--param-file",robot_controllers],
     )
-
+    imu_sensor_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["imu_sensor_broadcaster", "--param-file",robot_controllers],
+    )
     pos_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -90,6 +94,7 @@ def generate_launch_description():
         robot_state_pub_node,
         control_node,
         joint_state_broadcaster_spawner,
+        imu_sensor_broadcaster_spawner,
         pos_controller_spawner,
         rviz_node,
 

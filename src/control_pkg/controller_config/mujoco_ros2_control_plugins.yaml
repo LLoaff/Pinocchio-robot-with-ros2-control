@@ -3,4 +3,4 @@
     mujoco_plugins:
       heart_beat_plugin:
         type: "mujoco_ros2_control_plugins/HeartbeatPublisherPlugin"
-        update_rate: 1.0
+        update_rate: 2.0

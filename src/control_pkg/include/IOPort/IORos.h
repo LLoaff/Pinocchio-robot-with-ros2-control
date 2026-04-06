@@ -101,6 +101,7 @@ IORos::IORos():Node("IORos"){
     _joint_cmd->points[0].positions[11] =_state.Angle_Initialization_Variable.Left_Back_Calf_Angle_Init_Value;
     for(int i(0);i<12;++i){
         _init_q(i) = _joint_cmd->points[0].positions[i];
+        // std::cout<<"q:"<< i << " "<<_init_q(i)<<std::endl; 
     }
     
     

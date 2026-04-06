@@ -34,13 +34,13 @@ private:
 };
 
 Free_Stand_State::Free_Stand_State(ControlComponent * free_stand_ctrl_comp):FSMState(free_stand_ctrl_comp,FSMStateName::FREE_STAND,"Free_Stand"){
-    _rowMax = 7 * M_PI / 180;
+    _rowMax = 20 * M_PI / 180;
     _rowMin = -_rowMax;
-    _pitchMax = 7 * M_PI / 180;
+    _pitchMax = 20 * M_PI / 180;
     _pitchMin = -_pitchMax;
-    _yawMax = 8 * M_PI / 180;
+    _yawMax = 20 * M_PI / 180;
     _yawMin = -_yawMax;
-    _heightMax = 0.04;
+    _heightMax = 0.1;
     _heightMin = -_heightMax;
 }
 

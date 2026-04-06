@@ -26,7 +26,7 @@ private:
     Eigen::Matrix<int,4,1>*      _conact;
     Eigen::Matrix<float,3,3>     _KP;
     Eigen::Matrix<float,3,3>     _KD;
-    float                        _duration = 70;
+    float                        _duration = 170;
     float                        _percent  = 0;
 };
 
@@ -41,10 +41,10 @@ void Stand_State::enter()
     dq<< 30/180*M_PI, 30/180*M_PI, 30/180*M_PI;
     speed<< 0.07,0.07,0.1;
     tau<< 0 , 0 ,0;
-    _target_xyz << 0,-0.12,-0.365,
-                   0, 0.12,-0.365,
-                   0,-0.12,-0.365,
-                   0, 0.12,-0.365;
+    _target_xyz << 0,-0.1,-0.365,
+                   0, 0.1,-0.365,
+                   -0.04,-0.1,-0.365,
+                   -0.04, 0.1,-0.365;
     _KP<< 8.0,  0 ,   0,
           0 ,   8.0,  0,
           0 ,   0 ,   9.5;

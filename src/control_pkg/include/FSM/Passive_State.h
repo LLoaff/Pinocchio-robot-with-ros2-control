@@ -40,17 +40,9 @@ void Passive_State::enter()
     _fstate_ctrl->setAllSwing();
 }
 void Passive_State::run(){
-   std::cout<<"passive"<<std::endl;
+//    std::cout<<"passive"<<std::endl;
 }
-void Passive_State::exit()
-{
-    for(int i=0;i<4;i++)
-    {
-        _fstate_ctrl->_ioros->SetZeroD();
-        _fstate_ctrl->_ioros->SetZeroDq();
-        _fstate_ctrl->_ioros->SetZeroTau();
-        _fstate_ctrl->_ioros->SetZeroP();
-    }
+void Passive_State::exit(){
 }
 
 FSMStateName Passive_State::CheckChange()
