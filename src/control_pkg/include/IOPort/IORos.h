@@ -7,6 +7,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "control_msgs/msg/joint_trajectory_controller_state.hpp"
+#include "sensor_msgs/msg/imu.hpp"
 #include "mathtool.h"
 #include <csignal>
 #include <unistd.h>
@@ -23,6 +24,7 @@ public:
     void upDate();
     void init();
     void stateCallBack(const control_msgs::msg::JointTrajectoryControllerState& rec);
+    void imuCallBack(const sensor_msgs::msg::Imu& rec);
 
     Eigen::Matrix<float,3,4> getQ();
     Eigen::Matrix<float,12,1> getQ12();
@@ -54,6 +56,7 @@ public:
 private:
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr _joint_puber_;
     rclcpp::Subscription<control_msgs::msg::JointTrajectoryControllerState>::SharedPtr _joint_sub;
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr _imu_sub;
     std::shared_ptr<trajectory_msgs::msg::JointTrajectory> _joint_cmd;
 
     // std::shared_ptr<control_msgs::msg::JointTrajectoryControllerState> _joint_state;
@@ -112,6 +115,8 @@ IORos::IORos():Node("IORos"){
 void IORos::init(){
     _joint_sub = this->create_subscription<control_msgs::msg::JointTrajectoryControllerState>("/pos_controller/controller_state",1,
         std::bind(&IORos::stateCallBack,this,std::placeholders::_1));
+    _imu_sub = this->create_subscription<sensor_msgs::msg::Imu>("/imu_sensor_broadcaster/imu",1,
+        std::bind(&IORos::imuCallBack,this,std::placeholders::_1));
 }
 
 void IORos::upDate(){
@@ -129,6 +134,20 @@ void IORos::stateCallBack(const control_msgs::msg::JointTrajectoryControllerStat
         _state._motor_data[i].q = rec.feedback.positions[i];
         _state._motor_data[i].dq = rec.feedback.velocities[i];
     }
+}
+void IORos::imuCallBack(const sensor_msgs::msg::Imu& rec){
+    _state._imu.accelerometer[0] = rec.linear_acceleration.x;
+    _state._imu.accelerometer[1] = rec.linear_acceleration.y;
+    _state._imu.accelerometer[2] = rec.linear_acceleration.z;
+
+    _state._imu.gyroscope[0] = rec.angular_velocity.x;
+    _state._imu.gyroscope[1] = rec.angular_velocity.y;
+    _state._imu.gyroscope[2] = rec.angular_velocity.z;
+
+    _state._imu.quaternion[0] = rec.orientation.w;
+    _state._imu.quaternion[1] = rec.orientation.x;
+    _state._imu.quaternion[2] = rec.orientation.y;
+    _state._imu.quaternion[3] = rec.orientation.z;
 }
 
 Eigen::Matrix<float,3,4> IORos::getQ(){

@@ -45,6 +45,9 @@ void Stand_State::enter()
                    0, 0.1,-0.365,
                    -0.04,-0.1,-0.365,
                    -0.04, 0.1,-0.365;
+    // _target_xyz << 0.26,  0.26,  -0.3,  -0.3,
+    //               -0.146,  0.146,  -0.146,  0.146,
+    //               -0.365,-0.365,-0.365,-0.365;
     _KP<< 8.0,  0 ,   0,
           0 ,   8.0,  0,
           0 ,   0 ,   9.5;
@@ -66,6 +69,7 @@ void Stand_State::enter()
         _start_angle(3*i+2)  =  _fstate_ctrl->_ioros->_state._motor_data[3*i+2].q;
     }
     // std::cout<< "_target_angle: \n" << _target_angle<< std::endl;
+    // _target_angle = Reversal_GetQ(_target_xyz.cast<double>(),FrameType::BODY).cast<float>();
     _start_xyz =vec34ToVec12(GetFeetPos2BODY(_fstate_ctrl->_ioros->_state,FrameType::HIP).cast<float>());
     _fstate_ctrl->setAllStance();
 }
@@ -86,7 +90,7 @@ void Stand_State::run(){
     pos= (1-_percent)*_start_xyz + _percent*_target_xyz;
     target_q = (1-_percent)*_start_angle + _percent*_target_angle;
 
-    tau =CalTaus(q,w,_KP,_KD,_target_xyz,_target_speed,FrameType::HIP);
+    // tau =CalTaus(q,w,_KP,_KD,_target_xyz,_target_speed,FrameType::HIP);
 
     // if(_percent != 1){
         // std::cout<< "target_q:\n"<< target_q/M_PI*180 <<"---\n"<<std::endl;
@@ -95,8 +99,9 @@ void Stand_State::run(){
     // std::cout<< "target_q\n"<< target_q <<std::endl;
     
     _fstate_ctrl->_ioros->SetQ(target_q);
-    _fstate_ctrl->_ioros->SetTau(tau); 
-
+    // _fstate_ctrl->_ioros->SetTau(tau); 
+    // auto r = rotMatToRPY (_fstate_ctrl->_ioros->_state._imu.GetRotMat());
+    // std::cout<< "ro :\n" << r << std::endl;
 }
 
 void Stand_State::exit(){

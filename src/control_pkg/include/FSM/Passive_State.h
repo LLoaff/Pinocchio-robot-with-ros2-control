@@ -41,6 +41,7 @@ void Passive_State::enter()
 }
 void Passive_State::run(){
 //    std::cout<<"passive"<<std::endl;
+
 }
 void Passive_State::exit(){
 }

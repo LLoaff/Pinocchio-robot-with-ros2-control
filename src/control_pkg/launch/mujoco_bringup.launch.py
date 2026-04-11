@@ -96,7 +96,7 @@ def generate_launch_description():
         joint_state_broadcaster_spawner,
         imu_sensor_broadcaster_spawner,
         pos_controller_spawner,
-        rviz_node,
+        # rviz_node,
 
     ]
 

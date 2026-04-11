@@ -2,31 +2,6 @@
 
 <robot name="dog">
 
-  <!-- <link name="foot_print"/>
-  <joint name="foot2base" type="fixed">
-    <parent link="foot_print"/>
-    <child link="base_link"/>
-    <origin xyz="0 0 0.15" rpy = "0 0 0"/>
-  </joint> -->
-  <!-- <mujoco>
-        <keyframe>
-        <key name="init_pose" 
-        qpos="0 0 0.072 1 0 0 0    -0.61 0.88 -2.4569    0.61 0.88 -2.4569    -0.61 0.88 -2.4569    0.61 0.88 -2.4569" />
-        </keyframe>
-
-        <worldbody>
-          <body name="base_link">
-            <site name="imu_sensor" pos="0 0 0" rpy="0 0 0" />
-          </body>
-        </worldbody>
-
-        <sensor>
-          <framequat name="imu_sensor_quat" objtype="site" objname="imu_sensor" />
-          <gyro name="imu_sensor_gyro" site="imu_sensor" />
-          <accelerometer name="imu_sensor_accel" site="imu_sensor" />
-        </sensor>
-  </mujoco> -->
-
   <link
     name="base_link">
     <inertial>
@@ -34,14 +9,14 @@
         xyz="-0.00116799019536368 -0.000173594149801448 -0.0010330556103498"
         rpy="0 0 0" />
       <mass
-        value="3.79635843826293" />
+        value="4.5" />
       <inertia
-        ixx="0.00653180532591732"
+        ixx="0.0138"
         ixy="-1.11416127424025E-06"
         ixz="-7.14254730089636E-08"
-        iyy="0.00699486875003717"
+        iyy="0.0595"
         iyz="3.01555871343607E-09"
-        izz="0.00601133855423796" />
+        izz="0.0626" />
     </inertial>
     <visual>
       <origin
@@ -74,14 +49,14 @@
         xyz="0.0627765891913514 -0.00732402137606836 0.00137350387141103"
         rpy="0 0 0" />
       <mass
-        value="1.22881616014246" />
+        value="0.6" />
       <inertia
-        ixx="0.000631292527188374"
+        ixx="0.00048"
         ixy="3.67662027694883E-07"
         ixz="-2.31045557920619E-06"
-        iyy="0.00102652583112446"
+        iyy="0.0006"
         iyz="3.84306093913306E-07"
-        izz="0.000645066715525604" />
+        izz="0.00048" />
     </inertial>
     <visual>
       <origin
@@ -272,14 +247,14 @@
         xyz="0.0627765358969441 0.00765302314809621 -0.00137351911513577"
         rpy="0 0 0" />
       <mass
-        value="1.22881742389137" />
+        value="0.6" />
       <inertia
-        ixx="0.000631292707714591"
+        ixx="0.00048"
         ixy="-3.67698549791564E-07"
         ixz="2.31106298356401E-06"
-        iyy="0.00102652463314235"
+        iyy="0.0006"
         iyz="3.84297175292907E-07"
-        izz="0.000645065773792379" />
+        izz="0.00048" />
     </inertial>
     <visual>
       <origin
@@ -470,14 +445,14 @@
         xyz="-0.0627764275235256 -0.00732402694182105 -0.0013734252685203"
         rpy="0 0 0" />
       <mass
-        value="1.2288141630314" />
+        value="0.6" />
       <inertia
-        ixx="0.00063129214550813"
+        ixx="0.00048"
         ixy="-3.6743456585462E-07"
         ixz="-2.31042806499908E-06"
-        iyy="0.00102652462204545"
+        iyy="0.0006"
         iyz="-3.84157955506349E-07"
-        izz="0.000645066115091339" />
+        izz="0.00048" />
     </inertial>
     <visual>
       <origin
@@ -668,14 +643,14 @@
         xyz="-0.0627763928127562 0.00732401504497628 0.00137343527873432"
         rpy="0 0 0" />
       <mass
-        value="1.22881684709264" />
+        value="0.6" />
       <inertia
-        ixx="0.000631292448644309"
+        ixx="0.00048"
         ixy="3.67747906500063E-07"
         ixz="2.31082706601495E-06"
-        iyy="0.00102652544836147"
+        iyy="0.0006"
         iyz="-3.84340906047479E-07"
-        izz="0.00064506651120815" />
+        izz="0.00048" />
     </inertial>
     <visual>
       <origin

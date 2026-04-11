@@ -80,7 +80,7 @@ void ControlComponent::setStartWave(){
 }
 
 void ControlComponent::Estimator_Init(){
-    // _estimator = new Estimator(&_ctrl_cmd->_state, _contact,_phase,dt);
+    _estimator = new Estimator(&_ioros->_state, _contact,_phase,dt);
     // balCtrl = new BalanceCtrl();
 }
 

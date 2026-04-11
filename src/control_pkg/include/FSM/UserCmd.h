@@ -6,7 +6,25 @@
 #include <unistd.h> 
 #include "CSerialPort/SerialPort.h"
 #include "EnumClassList.h"
+#include <termios.h>
 
+// 设置键盘 非阻塞、无回显、无需回车
+void set_keyboard_nonblock() {
+    struct termios attr;
+    tcgetattr(0, &attr);
+    attr.c_cc[VMIN] = 0;              // 读键盘时：没有数据立刻返回
+    attr.c_cc[VTIME] = 0;
+    tcsetattr(0, TCSANOW, &attr);
+}
+
+// 非阻塞读键盘
+int kbhit() {
+    unsigned char ch;
+    if (read(0, &ch, 1) == 1) {
+        return ch; // 返回按键值
+    }
+    return 0;      // 无按键
+}
 typedef struct __packed{
         uint16_t ch0;
         uint16_t ch1;
@@ -35,7 +53,6 @@ public:
     itas109::CSerialPort _serial;
     uint8_t             _srerial_data[18];
     RC_Ctl_t            R_Data;
-
 };
 
 UserCmd::UserCmd()
@@ -67,9 +84,20 @@ void* UserCmd::KeyBoardInit(void * arg)
 
 void UserCmd::KeyBoardGet()
 {
-    // char key=0;
+    // set_keyboard_nonblock();
+    char key=0;
         while(true)
         {
+            // key = kbhit();
+            // if (key != 0) {
+            //     pthread_mutex_lock(&_mutex);
+            //     switch (key) {
+            //         case 'p': _user_value = UserValue::PASSIVE; break;
+            //         case 's': _user_value = UserValue::STAND;   break;
+            //         case 'f': _user_value = UserValue::FREE;    break;
+            //     }
+            //     pthread_mutex_unlock(&_mutex);
+            // }
             // key = getchar();
             // switch (key)
             // {
@@ -112,6 +140,9 @@ void UserCmd::KeyBoardGet()
 
 UserValue UserCmd::GetUserValue()
 {
+    // std::cout<<"s1: "<< (int)R_Data.s1<<std::endl;
+    // std::cout<<"s2: "<< (int)R_Data.s2<<std::endl;
+
     if(R_Data.s1 == 3 && R_Data.s2 ==3){
         _user_value = UserValue::PASSIVE;
     }
@@ -122,7 +153,7 @@ UserValue UserCmd::GetUserValue()
         _user_value = UserValue::STAND;
     }
     else if(R_Data.s1 == 1 && R_Data.s2 ==2){
-        _user_value = UserValue::FREE_STAND;
+        _user_value = UserValue::TROTTING;
     }
     else if(R_Data.s1 == 1 && R_Data.s2 ==1){
         _user_value = UserValue::TROTTING;

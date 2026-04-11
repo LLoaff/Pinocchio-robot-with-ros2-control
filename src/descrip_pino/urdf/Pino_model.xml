@@ -42,7 +42,7 @@
       <geom type="mesh" rgba="1 0.513726 0.835294 1" mesh="base_link" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
       <geom type="mesh" rgba="1 0.513726 0.835294 1" mesh="base_link" />
       <body name="fr_hip_Link" pos="0.16425 -0.056271 0.0065998" quat="1 0 0 -9.5735e-05">
-        <inertial pos="0.0627766 -0.00732402 0.0013735" quat="0.538805 0.458423 0.45746 0.538765" mass="1.22882" diaginertia="0.00102653 0.000645444 0.000630915" />
+        <inertial pos="0.0627766 -0.00732402 0.0013735" quat="0.538805 0.458423 0.45746 0.538765" mass="0.6" diaginertia="0.00048 0.0006 0.00048" />
         <joint name="fr_hip_joint" pos="0 0 0" axis="1 0 0" range="-1.05 1.05" actuatorfrcrange="-40 40" damping="0.01" frictionloss="1" />
         <geom type="mesh" rgba="1 0.301961 0.137255 1" mesh="fr_hip_Link" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
         <body name="fr_knee_Link" pos="0.093 -0.0211 0.0019065">
@@ -57,7 +57,7 @@
         </body>
       </body>
       <body name="fl_hip_Link" pos="0.16478 0.056229 0.0065999" quat="1 0 0 -9.5735e-05">
-        <inertial pos="0.0627765 0.00765302 -0.00137352" quat="0.457446 0.538777 0.538816 0.458409" mass="1.22882" diaginertia="0.00102653 0.000645443 0.000630915" />
+        <inertial pos="0.0627765 0.00765302 -0.00137352" quat="0.457446 0.538777 0.538816 0.458409" mass="0.6" diaginertia="0.00048 0.0006 0.00048" />
         <joint name="fl_hip_joint" pos="0 0 0" axis="1 0 0" range="-1.05 1.05" actuatorfrcrange="-40 40" damping="0.01" frictionloss="1" />
         <geom type="mesh" rgba="0.529412 0.54902 0.54902 1" mesh="fl_hip_Link" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
         <body name="fl_knee_Link" pos="0.093 0.0216 -0.0019065">
@@ -72,7 +72,7 @@
         </body>
       </body>
       <body name="br_hip_Link" pos="-0.16795 -0.056228 0.0067" quat="1 0 0 -9.5735e-05">
-        <inertial pos="-0.0627764 -0.00732403 -0.00137343" quat="0.538765 0.45746 0.458423 0.538805" mass="1.22881" diaginertia="0.00102653 0.000645443 0.000630914" />
+        <inertial pos="-0.0627764 -0.00732403 -0.00137343" quat="0.538765 0.45746 0.458423 0.538805" mass="0.6" diaginertia="0.00048 0.0006 0.00048" />
         <joint name="br_hip_joint" pos="0 0 0" axis="1 0 0" range="-1.05 1.05" actuatorfrcrange="-40 40" damping="0.01" frictionloss="1" />
         <geom type="mesh" rgba="1 0.301961 0.137255 1" mesh="br_hip_Link" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
         <body name="br_knee_Link" pos="-0.093 -0.0211 -0.0019064">
@@ -87,7 +87,7 @@
         </body>
       </body>
       <body name="bl_hip_Link" pos="-0.16792 0.056272 0.0067" quat="1 0 0 -9.5735e-05">
-        <inertial pos="-0.0627764 0.00732402 0.00137344" quat="0.458416 0.53881 0.538771 0.457453" mass="1.22882" diaginertia="0.00102653 0.000645444 0.000630915" />
+        <inertial pos="-0.0627764 0.00732402 0.00137344" quat="0.458416 0.53881 0.538771 0.457453" mass="0.6" diaginertia="0.00048 0.0006 0.00048" />
         <joint name="bl_hip_joint" pos="0 0 0" axis="1 0 0" range="-1.05 1.05" actuatorfrcrange="-40 40" damping="0.01" frictionloss="1" />
         <geom type="mesh" rgba="0.529412 0.54902 0.54902 1" mesh="bl_hip_Link" contype="1" conaffinity="0" density="0" group="1" class="visualgeom" />
         <body name="bl_knee_Link" pos="-0.093 0.0211 0.0019064">

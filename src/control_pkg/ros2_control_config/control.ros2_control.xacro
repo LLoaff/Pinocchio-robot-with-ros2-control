@@ -20,7 +20,6 @@
             <param name="orientation_mjcf_suffix">_quat</param>
             <param name="angular_velocity_mjcf_suffix">_gyro</param>
             <param name="linear_acceleration_mjcf_suffix">_accel</param>
-            <param name="topic_name">/imu/data</param>
             <state_interface name="orientation.x"/>
             <state_interface name="orientation.y"/>
             <state_interface name="orientation.z"/>

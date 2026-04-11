@@ -90,10 +90,14 @@ Eigen::Matrix<float,3,1> Reversal_Update_B(uint8_t group , float x , float y , f
         length = -_length_;
     }
     
-    pEe2B(0) = x - _length_;
-    pEe2B(1) = y - _weigh_;
+    pEe2B(0) = x - length;
+    pEe2B(1) = y - weigh;
     pEe2B(2) = z;
+    // std::cout<< " group: \n" << (int)group<< std::endl;
+    // std::cout<< " weigh: \n" << weigh<< std::endl;
+    // std::cout<< " length: \n" << length<< std::endl;
 
+    // std::cout<< " pEe2B: \n" << pEe2B<< std::endl;
     float q1, q2, q3;
     Eigen::Matrix<float,3,1> qResult;
     float px, py, pz;

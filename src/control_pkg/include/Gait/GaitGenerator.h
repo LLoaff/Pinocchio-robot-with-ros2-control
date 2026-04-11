@@ -34,6 +34,7 @@ private:
     Vec4 *_phase, _phasePast;
     VecInt4 *_contact;
     Vec34 _startP, _endP, _idealP, _pastP;
+    QuadrupedRobot *_robModel;
 
     bool _firstRun;
 
@@ -43,7 +44,7 @@ private:
 GaitGenerator::GaitGenerator(ControlComponent *ctrlComp)
               : _waveG(ctrlComp->waveGen), _est(ctrlComp->_estimator), 
                 _phase(ctrlComp->_phase), _contact(ctrlComp->_contact), 
-                 _state(&ctrlComp->_ioros->_state){
+                 _state(&ctrlComp->_ioros->_state),_robModel(ctrlComp->robotModel){
     _feetCal = new FeetEndCal(ctrlComp);
     _firstRun = true;
 }
@@ -61,7 +62,8 @@ void GaitGenerator::restart(){
 
 void GaitGenerator::run(Vec34 &feetPos, Vec34 &feetVel){
     if(_firstRun){
-        _startP = _est->getFeetPos();
+        // _startP = _est->getFeetPos();
+        _startP = _robModel->getFeetPosIdeal();
         _firstRun = false;
     }
 
@@ -75,10 +77,34 @@ void GaitGenerator::run(Vec34 &feetPos, Vec34 &feetVel){
         }
         else{
             _endP.col(i) = _feetCal->calFootPos(i, _vxyGoal, _dYawGoal, (*_phase)(i)); // 获得最终x、y的落脚点
+            switch (i)
+            {
+            case 0:
+                _endP(0,0)=_endP(0,0)+_startP(0,0);
+                _endP(1,0)=_endP(1,0)+_startP(1,0);
+                break;
+            case 1:
+                _endP(0,1)=_endP(0,1)+_startP(0,1);
+                _endP(1,1)=_endP(1,1)+_startP(1,1);
+                break;
+            case 2:
+                _endP(0,2)=_endP(0,2)+_startP(0,2);
+                _endP(1,2)=_endP(1,2)+_startP(1,2);
+                break;
+            case 3:
+                _endP(0,3)=_endP(0,3)+_startP(0,3);
+                _endP(1,3)=_endP(1,3)+_startP(1,3);
+                break;
+            default:
+                break;
+            }
             feetPos.col(i) = getFootPos(i); // 获取下一刻 足端的位置
             feetVel.col(i) = getFootVel(i); // 获取下一刻 足端的速度
         }
     }
+    std::cout<<"_endP:\n"<< _endP<<std::endl;
+    // std::cout<<"feetPos:\n"<< feetPos<<std::endl;
+    // sleep(1);
     _pastP = feetPos;
     _phasePast = *_phase;
 }

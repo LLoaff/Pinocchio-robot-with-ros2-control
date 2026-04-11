@@ -51,7 +51,7 @@ FSM::FSM(ControlComponent *_ctrlcomp):_fsm_ctrl(_ctrlcomp)
     _fsm_state_list.stand       = new Stand_State(_ctrlcomp);
     _fsm_state_list.free_stand  = new Free_Stand_State(_ctrlcomp);
     // _fsm_state_list.balance     = new Balance_State(_ctrlcomp,&_fsm_ctrl->_ctrl_cmd->_state);
-    // _fsm_state_list.trotting    = new Trotting_State(_ctrlcomp);
+    _fsm_state_list.trotting    = new Trotting_State(_ctrlcomp);
 
     initialize();
 }
@@ -68,8 +68,8 @@ void FSM::run()
 {
     _start_time = getSystemTime();
     _fsm_ctrl->_ioros->upDate();        // 对电机发送命令
-    // _fsm_ctrl->runWaveGen();
-    // _fsm_ctrl->_estimator->run();
+    _fsm_ctrl->runWaveGen();
+    _fsm_ctrl->_estimator->run();
     if(_mode == FSMMode::NORMAL)
     {
         _current_state->run();          // 当前 状态执行一次run 
@@ -127,7 +127,7 @@ FSM::~FSM()
     delete _fsm_state_list.stand;
     delete _fsm_state_list.free_stand;
     // delete _fsm_state_list.balance;
-    // delete _fsm_state_list.trotting;
+    delete _fsm_state_list.trotting;
 }
 
 

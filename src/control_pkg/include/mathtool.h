@@ -143,75 +143,76 @@ inline Eigen::Matrix<float, 3, 3> BalanceRPY(Eigen::Matrix<float, 4, 1> q){
     rotmat = roty(-rpy(1)) * rotx(-rpy(0));
     return rotmat;
 }
-// template<typename T1, typename T2, typename T3>  
-// inline void UpdateCovariance(T1 &cov, T2 expPast, T3 newValue, double n){
-//     if( (cov.rows()!=cov.cols()) || (cov.rows() != expPast.rows()) || (expPast.rows()!=newValue.rows())){
-//         std::cout << "The size of updateCovariance is error" << std::endl;
-//         exit(-1);
-//     }
-//     if(fabs(n - 1) < 0.1){
-//         cov.setZero();
-//     }else{
-//         cov = cov*(n-1)/n + (newValue-expPast)*(newValue-expPast).transpose()*(n-1)/(n*n); // 协方差递归公式 
-//     }
-// }
 
-// template<typename T1, typename T2>
-// inline void UpdateAverage(T1 &exp, T2 newValue, double n){
-//     if(exp.rows()!=newValue.rows()){
-//         std::cout << "The size of updateAverage is error" << std::endl;
-//         exit(-1);
-//     }
-//     if(fabs(n - 1) < 0.001){
-//         exp = newValue;
-//     }else{
-//         exp = exp + (newValue - exp)/n; // 平均值
-//     }
-// }
+template<typename T1, typename T2, typename T3>  
+inline void UpdateCovariance(T1 &cov, T2 expPast, T3 newValue, double n){
+    if( (cov.rows()!=cov.cols()) || (cov.rows() != expPast.rows()) || (expPast.rows()!=newValue.rows())){
+        std::cout << "The size of updateCovariance is error" << std::endl;
+        exit(-1);
+    }
+    if(fabs(n - 1) < 0.1){
+        cov.setZero();
+    }else{
+        cov = cov*(n-1)/n + (newValue-expPast)*(newValue-expPast).transpose()*(n-1)/(n*n); // 协方差递归公式 
+    }
+}
 
-// template<typename T1, typename T2, typename T3>
-// inline void  UpdateAvgCov(T1 &cov, T2 &exp, T3 newValue, double n){
-//     UpdateCovariance(cov, exp, newValue, n);
-//     UpdateAverage(exp, newValue, n);
+template<typename T1, typename T2>
+inline void UpdateAverage(T1 &exp, T2 newValue, double n){
+    if(exp.rows()!=newValue.rows()){
+        std::cout << "The size of updateAverage is error" << std::endl;
+        exit(-1);
+    }
+    if(fabs(n - 1) < 0.001){
+        exp = newValue;
+    }else{
+        exp = exp + (newValue - exp)/n; // 平均值
+    }
+}
 
-// }
-// class AvgCov{
-// public:
-//     AvgCov(unsigned int size , std::string name,bool avfonly = false , unsigned int showperiod = 500,unsigned int waitcount=1000,double zoomfactor=10000)
-//     : _size(size),_valuename(name),_avgonly(avfonly),_showperiod(showperiod),_waitcount(waitcount),_zoomfactor(zoomfactor){
-//     _exp.resize(size);
-//     _cov.resize(size,size);
-//     _defaultweight.resize(size, size);
-//     _defaultweight.setIdentity();
-//     _measurecount = 0;
-//     }
-//     // 传入的是Xn
-//     void Measure(Eigen::Matrix<double, Eigen::Dynamic, 1> newvalue){
-//         ++_measurecount;
-//         if(_measurecount > _waitcount){
-//             UpdateAvgCov(_cov, _exp, newvalue, _measurecount-_waitcount);
-//             if(_measurecount % _showperiod == 0){
-//                 std::cout << "******" << _valuename << " measured count: " << _measurecount-_waitcount << "******" << std::endl;
-//                 std::cout << _zoomfactor << " Times Average of " << _valuename << std::endl << (_zoomfactor*_exp).transpose() << std::endl;
-//                 if(!_avgonly){
-//                     std::cout << _zoomfactor << " Times Covariance of " << _valuename << std::endl << _zoomfactor*_cov << std::endl;
-//                 }
-//             }
-//         }
-//     }
+template<typename T1, typename T2, typename T3>
+inline void  UpdateAvgCov(T1 &cov, T2 &exp, T3 newValue, double n){
+    UpdateCovariance(cov, exp, newValue, n);
+    UpdateAverage(exp, newValue, n);
 
-// private:
-//     Eigen::Matrix<double, Eigen::Dynamic, 1>              _exp;     // 动态向量
-//     Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> _cov;     // 动态矩阵
-//     Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> _defaultweight;  // 默认宽度
-//     bool _avgonly;                                                  // 决定是否输出协方差
-//     unsigned int _size;
-//     unsigned int _measurecount;
-//     unsigned int _showperiod;
-//     unsigned int _waitcount;
-//     double _zoomfactor;                                             // 数值缩放因子
-//     std::string _valuename;
-// };
+}
+class AvgCov{
+public:
+    AvgCov(unsigned int size , std::string name,bool avfonly = false , unsigned int showperiod = 500,unsigned int waitcount=4000,double zoomfactor=10000)
+    : _size(size),_valuename(name),_avgonly(avfonly),_showperiod(showperiod),_waitcount(waitcount),_zoomfactor(zoomfactor){
+    _exp.resize(size);
+    _cov.resize(size,size);
+    _defaultweight.resize(size, size);
+    _defaultweight.setIdentity();
+    _measurecount = 0;
+    }
+    // 传入的是Xn
+    void Measure(Eigen::Matrix<double, Eigen::Dynamic, 1> newvalue){
+        ++_measurecount;
+        if(_measurecount > _waitcount){
+            UpdateAvgCov(_cov, _exp, newvalue, _measurecount-_waitcount);
+            if(_measurecount % _showperiod == 0){
+                std::cout << "******" << _valuename << " measured count: " << _measurecount-_waitcount << "******" << std::endl;
+                std::cout << _zoomfactor << " Times Average of " << _valuename << std::endl << (_zoomfactor*_exp).transpose() << std::endl;
+                if(!_avgonly){
+                    std::cout << _zoomfactor << " Times Covariance of " << _valuename << std::endl << _zoomfactor*_cov << std::endl;
+                }
+            }
+        }
+    }
+
+private:
+    Eigen::Matrix<double, Eigen::Dynamic, 1>              _exp;     // 动态向量
+    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> _cov;     // 动态矩阵
+    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> _defaultweight;  // 默认宽度
+    bool _avgonly;                                                  // 决定是否输出协方差
+    unsigned int _size;
+    unsigned int _measurecount;
+    unsigned int _showperiod;
+    unsigned int _waitcount;
+    double _zoomfactor;                                             // 数值缩放因子
+    std::string _valuename;
+};
 
 // 求反对称矩阵 ， 用于叉乘
 inline Eigen::Matrix<double, 3, 3> skew(const Eigen::Matrix<double, 3, 1>& v) {
