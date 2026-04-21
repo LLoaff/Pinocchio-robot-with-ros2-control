@@ -1,0 +1,99 @@
+[0.009s] Invoking command in '/home/loaf/Pinocchio_ws/build/control_pkg': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target start[0m
+[0.081s] [  9%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/LowPassFilter.cpp.o[0m
+[0.081s] [  9%] [32mBuilding CXX object CMakeFiles/start.dir/src/start.cpp.o[0m
+[0.081s] [ 14%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/Estimator.cpp.o[0m
+[0.081s] [ 23%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/FSMState.cpp.o[0m
+[0.081s] [ 23%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Free_Stand_State.cpp.o[0m
+[0.082s] [ 28%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Free_State.cpp.o[0m
+[0.082s] [ 33%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/BalanceCtrl.cpp.o[0m
+[0.082s] [ 38%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Balance_State.cpp.o[0m
+[0.082s] [ 42%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/Imu.cpp.o[0m
+[0.082s] [ 47%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/FSM.cpp.o[0m
+[0.083s] [ 52%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/ControlComponent.cpp.o[0m
+[0.083s] [ 57%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Stand_State.cpp.o[0m
+[0.083s] [ 61%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Passive_State.cpp.o[0m
+[0.083s] [ 66%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o[0m
+[0.083s] [ 71%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/UserCmd.cpp.o[0m
+[0.084s] [ 76%] [32mBuilding CXX object CMakeFiles/start.dir/src/Gait/GaitGenerator.cpp.o[0m
+[0.085s] [ 80%] [32mBuilding CXX object CMakeFiles/start.dir/src/IOPort/IORos.cpp.o[0m
+[0.085s] [ 85%] [32mBuilding CXX object CMakeFiles/start.dir/src/Gait/FeetEndCal.cpp.o[0m
+[0.182s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:3:1:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[KLPFilter::LPFilter(double, double)[m[K’
+[0.183s]     3 | [01;31m[KLPFilter[m[K::LPFilter(double samplePeriod, double cutFrequency){
+[0.183s]       | [01;31m[K^~~~~~~~[m[K
+[0.183s] In file included from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:1[m[K:
+[0.183s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/LowPassFilter.h:18:1:[m[K [01;36m[Knote: [m[K‘[01m[KLPFilter::LPFilter(double, double)[m[K’ previously defined here
+[0.183s]    18 | [01;36m[KLPFilter[m[K::LPFilter(double samplePeriod, double cutFrequency){
+[0.183s]       | [01;36m[K^~~~~~~~[m[K
+[0.183s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:8:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid LPFilter::addValue(double)[m[K’
+[0.183s]     8 | void [01;31m[KLPFilter[m[K::addValue(double newValue){
+[0.183s]       |      [01;31m[K^~~~~~~~[m[K
+[0.183s] In file included from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:1[m[K:
+[0.183s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/LowPassFilter.h:23:6:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid LPFilter::addValue(double)[m[K’ previously defined here
+[0.183s]    23 | void [01;36m[KLPFilter[m[K::addValue(double newValue){
+[0.183s]       |      [01;36m[K^~~~~~~~[m[K
+[0.183s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:16:8:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kdouble LPFilter::getValue()[m[K’
+[0.183s]    16 | double [01;31m[KLPFilter[m[K::getValue(){
+[0.183s]       |        [01;31m[K^~~~~~~~[m[K
+[0.183s] In file included from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:1[m[K:
+[0.183s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/LowPassFilter.h:31:8:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble LPFilter::getValue()[m[K’ previously defined here
+[0.183s]    31 | double [01;36m[KLPFilter[m[K::getValue(){
+[0.183s]       |        [01;36m[K^~~~~~~~[m[K
+[0.183s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:20:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid LPFilter::clear()[m[K’
+[0.184s]    20 | void [01;31m[KLPFilter[m[K::clear(){
+[0.184s]       |      [01;31m[K^~~~~~~~[m[K
+[0.184s] In file included from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/common/LowPassFilter.cpp:1[m[K:
+[0.184s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/LowPassFilter.h:35:6:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid LPFilter::clear()[m[K’ previously defined here
+[0.184s]    35 | void [01;36m[KLPFilter[m[K::clear(){
+[0.184s]       |      [01;36m[K^~~~~~~~[m[K
+[0.205s] gmake[2]: *** [CMakeFiles/start.dir/build.make:132：CMakeFiles/start.dir/src/common/LowPassFilter.cpp.o] 错误 1
+[0.205s] gmake[2]: *** 正在等待未完成的任务....
+[0.330s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/UserCmd.cpp:[m[K In constructor ‘[01m[KUserCmd::UserCmd()[m[K’:
+[0.330s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/UserCmd.cpp:14:48:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects a matching ‘[01m[Kchar*[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[0.330s]    14 |             printf("open fail--------- reason:[01;35m[K%s[m[K\n");
+[0.330s]       |                                               [01;35m[K~^[m[K
+[0.330s]       |                                                [01;35m[K|[m[K
+[0.330s]       |                                                [01;35m[Kchar*[m[K
+[3.269s] In file included from [01m[K/usr/local/include/QuadProg++/QuadProg++.hh:65[m[K,
+[3.269s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/BalanceCtrl.h:5[m[K,
+[3.269s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/ControlComponent.h:6[m[K,
+[3.269s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/Stand_State.h:4[m[K,
+[3.269s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/Stand_State.cpp:1[m[K:
+[3.269s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:[m[K In function ‘[01m[KVec3 calcQd(int, Vec3, Vec3, FrameType)[m[K’:
+[3.269s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:183:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct Eigen::Matrix<double, 3, 3>[m[K’ has no member named ‘[01m[Klu_inverse[m[K’; did you mean ‘[01m[Kinverse[m[K’?
+[3.269s]   183 |     return calcJaco(legid,q.cast<float>()).[01;31m[Kinverse[m[K() * vEe;
+[3.269s]       |                                            [01;31m[K^~~~~~~[m[K
+[4.149s] In file included from [01m[K/usr/local/include/QuadProg++/QuadProg++.hh:65[m[K,
+[4.149s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/BalanceCtrl.h:5[m[K,
+[4.149s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/ControlComponent.h:6[m[K,
+[4.149s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/Free_Stand_State.h:4[m[K,
+[4.149s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/Free_Stand_State.cpp:1[m[K:
+[4.149s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:[m[K In function ‘[01m[KVec3 calcQd(int, Vec3, Vec3, FrameType)[m[K’:
+[4.149s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:183:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct Eigen::Matrix<double, 3, 3>[m[K’ has no member named ‘[01m[Klu_inverse[m[K’; did you mean ‘[01m[Kinverse[m[K’?
+[4.149s]   183 |     return calcJaco(legid,q.cast<float>()).[01;31m[Kinverse[m[K() * vEe;
+[4.149s]       |                                            [01;31m[K^~~~~~~[m[K
+[4.572s] In file included from [01m[K/usr/local/include/QuadProg++/QuadProg++.hh:65[m[K,
+[4.572s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/BalanceCtrl.h:5[m[K,
+[4.572s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/ControlComponent.h:6[m[K,
+[4.572s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/FSM.h:4[m[K,
+[4.573s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/FSM.cpp:1[m[K:
+[4.573s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:[m[K In function ‘[01m[KVec3 calcQd(int, Vec3, Vec3, FrameType)[m[K’:
+[4.573s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:183:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct Eigen::Matrix<double, 3, 3>[m[K’ has no member named ‘[01m[Klu_inverse[m[K’; did you mean ‘[01m[Kinverse[m[K’?
+[4.573s]   183 |     return calcJaco(legid,q.cast<float>()).[01;31m[Kinverse[m[K() * vEe;
+[4.573s]       |                                            [01;31m[K^~~~~~~[m[K
+[4.594s] gmake[2]: *** [CMakeFiles/start.dir/build.make:258：CMakeFiles/start.dir/src/FSM/Stand_State.cpp.o] 错误 1
+[4.946s] In file included from [01m[K/usr/local/include/QuadProg++/QuadProg++.hh:65[m[K,
+[4.946s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/BalanceCtrl.h:5[m[K,
+[4.946s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/ControlComponent.h:6[m[K,
+[4.946s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/Trotting_State.h:4[m[K,
+[4.946s]                  from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/Trotting_State.cpp:1[m[K:
+[4.946s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:[m[K In function ‘[01m[KVec3 calcQd(int, Vec3, Vec3, FrameType)[m[K’:
+[4.946s] [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Reversal_solution.h:183:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct Eigen::Matrix<double, 3, 3>[m[K’ has no member named ‘[01m[Klu_inverse[m[K’; did you mean ‘[01m[Kinverse[m[K’?
+[4.946s]   183 |     return calcJaco(legid,q.cast<float>()).[01;31m[Kinverse[m[K() * vEe;
+[4.946s]       |                                            [01;31m[K^~~~~~~[m[K
+[5.431s] gmake[2]: *** [CMakeFiles/start.dir/build.make:188：CMakeFiles/start.dir/src/FSM/Free_Stand_State.cpp.o] 错误 1
+[5.839s] gmake[2]: *** [CMakeFiles/start.dir/build.make:216：CMakeFiles/start.dir/src/FSM/FSM.cpp.o] 错误 1
+[6.276s] gmake[2]: *** [CMakeFiles/start.dir/build.make:272：CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o] 错误 1
+[12.504s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/start.dir/all] 错误 2
+[12.504s] gmake: *** [Makefile:146：all] 错误 2
+[12.508s] Invoked command in '/home/loaf/Pinocchio_ws/build/control_pkg' returned '2': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24

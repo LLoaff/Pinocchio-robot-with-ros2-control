@@ -1,0 +1,6 @@
+{
+  "package_name": "motor_control_msgs",
+  "non_idl_tuples": [
+    "/home/loaf/Pinocchio_ws/src/motor_control_msgs:msg/DmInterface.msg"
+  ]
+}

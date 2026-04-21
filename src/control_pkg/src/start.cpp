@@ -27,7 +27,7 @@ int main(int argc,char** argv) {
     
     ControlComponent * ctrl = new ControlComponent();
     ctrl->dt = 0.002;    
-    ctrl->waveGen = new WaveGenerator(1.5, 0.5, Vec4(0, 0.5, 0.5, 0)); // Trot
+    ctrl->waveGen = new WaveGenerator(0.5, 0.5, Vec4(0, 0.5, 0.5, 0)); // Trot
 
     ctrl->Estimator_Init();
 

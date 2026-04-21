@@ -27,13 +27,16 @@ private:
     GaitGenerator *_gait;
     Estimator *_est;
     QuadrupedRobot *_robModel;
+    BalanceCtrl *_balCtrl;
 
     Vec3    _posBody, _velBody;
     double  _yaw, _dYaw;
     Vec34   _posFeetGlobal, _velFeetGlobal;                 // 足端位置  足端速度
     Vec34   _posFeet2BGlobal;                               // 足端位置+质心位置
     RotMat  _B2G_RotMat, _G2B_RotMat;
-    Vec12   _q;
+    Vec12    _q;
+    Eigen::Matrix<float,12,1>   _qqq;
+    Eigen::Matrix<float,12,1>   _www;
 
     Vec3    _pcd;                                           // 存储xyz上的位移
     Vec3    _vCmdGlobal, _vCmdBody;
@@ -51,181 +54,17 @@ private:
     double  _gaitHeight;
     Vec3    _posError, _velError;
 
+    Mat3 _Kpp, _Kdp, _Kdw;
+    double _kpw;
+    Mat3 _KpSwing, _KdSwing;
+
     Vec2    _vxLim, _vyLim, _wyawLim;
     Vec4 *  _phase;
     VecInt4 *_contact;
     Vec4 _userValue;
     LowState* _lowstate;
+
+    Eigen::Matrix<float,3,3>     _KP;
+    Eigen::Matrix<float,3,3>     _KD;
 };
-
-Trotting_State::Trotting_State(ControlComponent * ctrlComp):FSMState(ctrlComp,FSMStateName::TROTTING,"trotting"),
-_est(ctrlComp->_estimator),_phase(ctrlComp->_phase),_contact(ctrlComp->_contact),_robModel(ctrlComp->robotModel),_lowstate(&ctrlComp->_ioros->_state){
-    _gait = new GaitGenerator(ctrlComp);
-    _gaitHeight = 0.1;
-
-    _vxLim = _robModel->getRobVelLimitX();
-    _vyLim = _robModel->getRobVelLimitY();
-    _wyawLim = _robModel->getRobVelLimitYaw();
-}
-
-void Trotting_State::enter(){
-
-    _vCmdBody.setZero();
-    _wCmdGlobal.setZero();
-
-    _yawCmd = _lowstate->_imu.getYaw();
-    _Rd = rotz((float)_yawCmd).cast<double>();            // _yawCmd存的是当前机身朝向角
-
-    _gait->restart();
-}
-
-void Trotting_State::exit(){
-    _fstate_ctrl->setAllSwing();
-}
-
-FSMStateName Trotting_State::CheckChange(){
-    UserValue user = _fstate_ctrl->user_cmd->GetUserValue();
-    if( user == UserValue::PASSIVE)
-        return FSMStateName::PASSIVE;
-    else if ( user == UserValue::STAND)
-        return FSMStateName::STAND;
-    return FSMStateName::TROTTING;
-}
-
-Trotting_State::~Trotting_State(){
-    delete _gait;
-}
-
-void Trotting_State::run(){
-    // std::cout<< "contact:"<< *_contact <<std::endl;
-    // std::cout<< "_phase:"<< *_phase <<std::endl;
-    _B2G_RotMat = _lowstate->_imu.GetRotMat().cast<double>();
-    _G2B_RotMat = _B2G_RotMat.transpose();
-    _yaw = _lowstate->_imu.getYaw() ;
-    _dYaw = _lowstate->_imu.getDYaw();
-
-/* 遥控归一 */
-    float ly = (_fstate_ctrl->user_cmd->R_Data.ch3 - 1024) / 660.0;
-    float lx = (_fstate_ctrl->user_cmd->R_Data.ch2 - 1024) / 660.0;
-    float ry = (_fstate_ctrl->user_cmd->R_Data.ch1 - 1024) / 660.0;
-    float rx = (_fstate_ctrl->user_cmd->R_Data.ch0 - 1024) / 660.0;
-    _userValue(0) = ly;
-    _userValue(1) = lx;
-    _userValue(2) = ry;
-    _userValue(3) = rx;
-
-    getUserCmd(); // 计算 期望速度
-    calcCmd();    // 计算位移、转动角度，获取全局速度
-            //      全局 v                      全局角速度        抬腿高度
-    _gait->setGait(_vCmdGlobal.segment(0,2), _wCmdGlobal(2), _gaitHeight);
-    _gait->run(_posFeetGlobalGoal, _velFeetGlobalGoal); // 生成下一刻的 足端坐标 、速度 (global)
-
-    // for(int i(0); i<4; ++i){
-    //     _posFeet2BGoal.col(i) = _G2B_RotMat * (_posFeetGlobalGoal.col(i) - _posBody);
-    //     _velFeet2BGoal.col(i) = _G2B_RotMat * (_velFeetGlobalGoal.col(i) - _velBody); 
-    // }
-    // std::cout<<"next_pos:\n"<< _posFeet2BGoal<<std::endl;
-    // calcQQd(); // 计算机身坐标系下 足端坐标、速度
-    _qGoal = vec12ToVec34 ( Reversal_GetQ (_posFeetGlobalGoal, FrameType::BODY));
-    // std::cout<<"_pos:\n"<< _posFeetGlobalGoal<< "\n"<<std::endl;
-    // sleep(1);
-    // std::cout<<"_dq:\n"<< _qdGoal<< "\n"<<std::endl;
-    if(checkStepOrNot()){
-        _fstate_ctrl->setStartWave();
-    }else{
-        _fstate_ctrl->setAllStance();
-    }
-    // _fsm_state_ctrl_comp->_ctrl_cmd->SetTau(_tau);
-    _fstate_ctrl->_ioros->SetQ(vec34ToVec12 (_qGoal.cast<float>()));
-
-
-}
-
-bool Trotting_State::checkStepOrNot(){
-    if( (fabs(_vCmdBody(0)) > 0.03) ||
-        (fabs(_vCmdBody(1)) > 0.03) ||
-        (fabs(_posError(0)) > 0.08) ||
-        (fabs(_posError(1)) > 0.08) ||
-        (fabs(_velError(0)) > 0.05) ||
-        (fabs(_velError(1)) > 0.05) ||
-        (fabs(_dYawCmd) > 0.05) ){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-void Trotting_State::setHighCmd(double vx, double vy, double wz){
-    _vCmdBody(0) = vx;
-    _vCmdBody(1) = vy;
-    _vCmdBody(2) = 0; 
-    _dYawCmd = wz;
-}
-// 期望速度 _vCmdBody：OK  全局期望速度 _vCmdGlobal：OK  全局期望角速度_wCmdGlobal：OK
-// 质心位移 _pcd：OK
-void Trotting_State::getUserCmd(){
-    /* Movement */
-    _vCmdBody(0) =  invNormalize(_userValue(0), _vxLim(0), _vxLim(1));// 换算x上期望速度
-    _vCmdBody(1) = -invNormalize(_userValue(1), _vyLim(0), _vyLim(1));// 换算y上期望速度
-    _vCmdBody(2) = 0;
-
-    /* Turning */
-    _dYawCmd = -invNormalize(_userValue(3), _wyawLim(0), _wyawLim(1));// 换算转动期望速度
-    _dYawCmd = 0.9*_dYawCmdPast + (1-0.9) * _dYawCmd;                 // 低通滤波
-    _dYawCmdPast = _dYawCmd;
-
-    // std::cout<< "_vCmdBody: \n"<< _vCmdBody << std::endl;   
-    // std::cout<< "_dYawCmd: "<< _dYawCmd << std::endl;
-}
-
-void Trotting_State::calcCmd(){
-    /* Movement */
-    // _vCmdGlobal = _B2G_RotMat * _vCmdBody;
-    _vCmdGlobal = _vCmdBody;
-
-    // _vCmdGlobal(0) = saturation(_vCmdGlobal(0), Vec2(_velBody(0)-0.2, _velBody(0)+0.2)); // 对全局期望速度限幅
-    // _vCmdGlobal(1) = saturation(_vCmdGlobal(1), Vec2(_velBody(1)-0.2, _velBody(1)+0.2));
-    _vCmdGlobal(0) = saturation(_vCmdGlobal(0), Vec2(-0.4, 0.4));
-    _vCmdGlobal(1) = saturation(_vCmdGlobal(1), Vec2(-0.1, 0.1));
-
-    // std::cout<< "_velBody: \n"<< _velBody << std::endl;
-    // std::cout<< "_vCmdGlobal: \n"<< _vCmdGlobal << std::endl;
-
-    // _pcd(0) + _vCmdGlobal(0) * _fsm_state_ctrl_comp->dt:对速度积分、累加质心位置，算位移
-    // 再对位移限幅
-    // _pcd(0) = saturation(_pcd(0) + _vCmdGlobal(0) * _fstate_ctrl->dt, Vec2(_posBody(0) - 0.05, _posBody(0) + 0.05));
-    // _pcd(1) = saturation(_pcd(1) + _vCmdGlobal(1) * _fstate_ctrl->dt, Vec2(_posBody(1) - 0.05, _posBody(1) + 0.05));
-
-    _vCmdGlobal(2) = 0;
-
-    /* Turning */
-    _yawCmd = _yawCmd + _dYawCmd * _fstate_ctrl->dt;// 计算累积角度
-
-    _Rd = rotz(_yawCmd).cast<double>();
-    _wCmdGlobal(2) = _dYawCmd;
-
-    // std::cout<< "_B2G_RotMat: \n"<< _B2G_RotMat << std::endl;
-    // std::cout<< "_vCmdBody: \n"<< _vCmdBody << std::endl;
-    // std::cout<< "_vCmdGlobal: \n"<< _vCmdGlobal << std::endl;
-    // std::cout<< "_wCmdGlobal:\n"<<_wCmdGlobal<<std::endl;
-    // std::cout<< "_pcd:\n"<<_pcd<<std::endl;
-    // std::cout<< "_yawCmd:"<<_yawCmd<<std::endl;
-}
-
-void Trotting_State::calcQQd(){
-
-    Vec34 _posFeet2B;
-    _posFeet2B = GetFeetPos2BODY(*_lowstate,FrameType::BODY);
-    
-    for(int i(0); i<4; ++i){
-        _posFeet2BGoal.col(i) = _G2B_RotMat * (_posFeetGlobalGoal.col(i));
-        _velFeet2BGoal.col(i) = _G2B_RotMat * (_velFeetGlobalGoal.col(i)); 
-    }
-    // std::cout<<"_posFeet2BGoal:\n"<< _posFeet2BGoal <<std::endl;
-    // sleep(1);
-    _qGoal = vec12ToVec34(Reversal_GetQ(_posFeet2BGoal, FrameType::BODY));
-    _qdGoal = vec12ToVec34(Reversal_GetQd(_posFeet2B, _velFeet2BGoal, FrameType::BODY));
-}
-
-
 #endif

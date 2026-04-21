@@ -1,0 +1,4 @@
+gmake[2]: *** [CMakeFiles/start.dir/build.make:160: CMakeFiles/start.dir/src/FSM/Balance_State.cpp.o] 中断
+gmake[2]: *** [CMakeFiles/start.dir/build.make:216: CMakeFiles/start.dir/src/FSM/FSM.cpp.o] 中断
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/start.dir/all] 中断
+gmake: *** [Makefile:146: all] 中断

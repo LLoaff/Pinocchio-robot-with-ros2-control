@@ -1,0 +1,64 @@
+/usr/bin/ld: CMakeFiles/start.dir/src/common/Estimator.cpp.o: in function `Angle2Radian(float)':
+Estimator.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/common/Estimator.cpp.o: in function `Radian2Angle(float)':
+Estimator.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Balance_State.cpp.o: in function `Angle2Radian(float)':
+Balance_State.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Balance_State.cpp.o: in function `Radian2Angle(float)':
+Balance_State.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/ControlComponent.cpp.o: in function `Angle2Radian(float)':
+ControlComponent.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/ControlComponent.cpp.o: in function `Radian2Angle(float)':
+ControlComponent.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Free_Stand_State.cpp.o: in function `Angle2Radian(float)':
+Free_Stand_State.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Free_Stand_State.cpp.o: in function `Radian2Angle(float)':
+Free_Stand_State.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Free_State.cpp.o: in function `Angle2Radian(float)':
+Free_State.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Free_State.cpp.o: in function `Radian2Angle(float)':
+Free_State.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/FSM.cpp.o: in function `Angle2Radian(float)':
+FSM.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/FSM.cpp.o: in function `Radian2Angle(float)':
+FSM.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/FSMState.cpp.o: in function `Angle2Radian(float)':
+FSMState.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/FSMState.cpp.o: in function `Radian2Angle(float)':
+FSMState.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Passive_State.cpp.o: in function `Angle2Radian(float)':
+Passive_State.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Passive_State.cpp.o: in function `Radian2Angle(float)':
+Passive_State.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Stand_State.cpp.o: in function `Angle2Radian(float)':
+Stand_State.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Stand_State.cpp.o: in function `Radian2Angle(float)':
+Stand_State.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o: in function `Angle2Radian(float)':
+Trotting_State.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o: in function `Radian2Angle(float)':
+Trotting_State.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/Gait/FeetEndCal.cpp.o: in function `Angle2Radian(float)':
+FeetEndCal.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/Gait/FeetEndCal.cpp.o: in function `Radian2Angle(float)':
+FeetEndCal.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/Gait/GaitGenerator.cpp.o: in function `Angle2Radian(float)':
+GaitGenerator.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/Gait/GaitGenerator.cpp.o: in function `Radian2Angle(float)':
+GaitGenerator.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/IOPort/IORos.cpp.o: in function `Angle2Radian(float)':
+IORos.cpp:(.text+0x69): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/IOPort/IORos.cpp.o: in function `Radian2Angle(float)':
+IORos.cpp:(.text+0xa1): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/math/Kenimatics_normal_solution.cpp.o: in function `Angle2Radian(float)':
+Kenimatics_normal_solution.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/math/Kenimatics_normal_solution.cpp.o: in function `Radian2Angle(float)':
+Kenimatics_normal_solution.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/math/Reversal_solution.cpp.o: in function `Angle2Radian(float)':
+Reversal_solution.cpp:(.text+0x0): multiple definition of `Angle2Radian(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x0): first defined here
+/usr/bin/ld: CMakeFiles/start.dir/src/math/Reversal_solution.cpp.o: in function `Radian2Angle(float)':
+Reversal_solution.cpp:(.text+0x38): multiple definition of `Radian2Angle(float)'; CMakeFiles/start.dir/src/start.cpp.o:start.cpp:(.text+0x38): first defined here
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/start.dir/build.make:551：start] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/start.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -6,6 +6,7 @@
                 "${workspaceFolder}/**",
                 "/opt/ros/humble/include/**",
                 "~/Pinocchio_ws/src/control_pkg/include/**",
+                "~/Pinocchio_ws/install/motor_control_msgs/include/**",
                 "/usr/include/**",
                 "/opt/mujoco/include/**"
             ],

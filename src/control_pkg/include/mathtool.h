@@ -1,9 +1,9 @@
 #ifndef MATHTOOL_H
 #define MATHTOOL_H
 
-#include "Kenimatics_normal_solution.h"
 #include "FSM/EnumClassList.h"
-
+#include "eigen3/Eigen/Dense"
+#include <iostream>
 
 #define _labad_   0.0838
 #define _lhip_    0.20693
@@ -178,7 +178,7 @@ inline void  UpdateAvgCov(T1 &cov, T2 &exp, T3 newValue, double n){
 }
 class AvgCov{
 public:
-    AvgCov(unsigned int size , std::string name,bool avfonly = false , unsigned int showperiod = 500,unsigned int waitcount=4000,double zoomfactor=10000)
+    AvgCov(unsigned int size , std::string name,bool avfonly = false , unsigned int showperiod = 500,unsigned int waitcount=5000,double zoomfactor=1)
     : _size(size),_valuename(name),_avgonly(avfonly),_showperiod(showperiod),_waitcount(waitcount),_zoomfactor(zoomfactor){
     _exp.resize(size);
     _cov.resize(size,size);

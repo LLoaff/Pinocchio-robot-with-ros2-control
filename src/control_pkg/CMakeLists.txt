@@ -23,9 +23,17 @@ find_package(rclcpp REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(motor_control_msgs REQUIRED)
 
 
-add_executable(start src/start.cpp )
+add_executable(start src/start.cpp 
+src/common/BalanceCtrl.cpp src/common/Estimator.cpp src/common/Imu.cpp src/common/LowPassFilter.cpp src/common/Robot.cpp  
+src/FSM/Balance_State.cpp src/FSM/ControlComponent.cpp src/FSM/Free_Stand_State.cpp src/FSM/Free_State.cpp src/FSM/FSM.cpp src/FSM/FSMState.cpp
+src/FSM/Passive_State.cpp src/FSM/Stand_State.cpp src/FSM/Trotting_State.cpp src/FSM/UserCmd.cpp
+src/Gait/FeetEndCal.cpp src/Gait/GaitGenerator.cpp src/Gait/WaveGenerator.cpp
+src/IOPort/IORos.cpp
+src/math/Kenimatics_normal_solution.cpp src/math/Reversal_solution.cpp
+)
 
 include_directories(${PROJECT_SOURCE_DIR}/include
     /usr/local/include/CSerialPort
@@ -36,6 +44,7 @@ ament_target_dependencies(start
   trajectory_msgs
   control_msgs
   sensor_msgs
+  motor_control_msgs
 )
 
 target_link_libraries(

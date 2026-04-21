@@ -7,14 +7,14 @@
 #include "Imu.h"
 #include <eigen3/Eigen/Dense>
 
-float Angle2Radian(float angle) // 角度转弧度
-{
-  return angle/180*M_PI;
-}
-float Radian2Angle(float radian)// 弧度转角度
-{
-  return radian/M_PI*180;
-}
+// float Angle2Radian(float angle) // 角度转弧度
+// {
+//   return angle/180*M_PI;
+// }
+// float Radian2Angle(float radian)// 弧度转角度
+// {
+//   return radian/M_PI*180;
+// }
 
 struct Angle_Initialization     // 手动标定电机角度
 {

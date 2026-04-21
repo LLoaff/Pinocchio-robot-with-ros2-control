@@ -1,0 +1,55 @@
+[0.008s] Invoking command in '/home/loaf/Pinocchio_ws/build/control_pkg': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target start[0m
+[0.085s] [  4%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Balance_State.cpp.o[0m
+[0.085s] [  8%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Free_Stand_State.cpp.o[0m
+[0.085s] [ 13%] [32mBuilding CXX object CMakeFiles/start.dir/src/start.cpp.o[0m
+[0.086s] [ 21%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/Estimator.cpp.o[0m
+[0.086s] [ 21%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/BalanceCtrl.cpp.o[0m
+[0.086s] [ 26%] [32mBuilding CXX object CMakeFiles/start.dir/src/common/Imu.cpp.o[0m
+[0.087s] [ 30%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/ControlComponent.cpp.o[0m
+[0.087s] [ 34%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/FSM.cpp.o[0m
+[0.088s] [ 39%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/FSMState.cpp.o[0m
+[0.091s] [ 43%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Free_State.cpp.o[0m
+[0.091s] [ 52%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Passive_State.cpp.o[0m
+[0.091s] [ 52%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Stand_State.cpp.o[0m
+[0.091s] [ 56%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/UserCmd.cpp.o[0m
+[0.091s] [ 60%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o[0m
+[0.091s] [ 65%] [32mBuilding CXX object CMakeFiles/start.dir/src/Gait/FeetEndCal.cpp.o[0m
+[0.094s] [ 69%] [32mBuilding CXX object CMakeFiles/start.dir/src/IOPort/IORos.cpp.o[0m
+[0.094s] [ 73%] [32mBuilding CXX object CMakeFiles/start.dir/src/Gait/GaitGenerator.cpp.o[0m
+[0.096s] [ 82%] [32mBuilding CXX object CMakeFiles/start.dir/src/math/Kenimatics_normal_solution.cpp.o[0m
+[0.096s] [ 82%] [32mBuilding CXX object CMakeFiles/start.dir/src/math/Reversal_solution.cpp.o[0m
+[12.931s] [ 86%] [32m[1mLinking CXX executable start[0m
+[13.888s] [100%] Built target start
+[13.900s] Invoked command in '/home/loaf/Pinocchio_ws/build/control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24
+[13.903s] Invoking command in '/home/loaf/Pinocchio_ws/build/control_pkg': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/control_pkg
+[13.912s] -- Install configuration: ""
+[13.912s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/launch
+[13.912s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/launch/mujoco_bringup.launch.py
+[13.912s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/launch/bringup.launch.py
+[13.912s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/controller_config
+[13.912s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/controller_config/mujoco_ros2_control_plugins.yaml
+[13.913s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/controller_config/config.yaml
+[13.913s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/controller_config/pid_config.yaml
+[13.913s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/ros2_control_config
+[13.914s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/ros2_control_config/control.ros2_control.xacro
+[13.914s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/rviz_config
+[13.914s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/rviz_config/rviz.rviz
+[13.916s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/lib/control_pkg/start
+[13.923s] -- Set runtime path of "/home/loaf/Pinocchio_ws/install/control_pkg/lib/control_pkg/start" to ""
+[13.925s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/ament_index/resource_index/package_run_dependencies/control_pkg
+[13.926s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/ament_index/resource_index/parent_prefix_path/control_pkg
+[13.926s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/ament_prefix_path.sh
+[13.926s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/ament_prefix_path.dsv
+[13.926s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/path.sh
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/environment/path.dsv
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.bash
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.sh
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.zsh
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/local_setup.dsv
+[13.927s] -- Installing: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/package.dsv
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/ament_index/resource_index/packages/control_pkg
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/cmake/control_pkgConfig.cmake
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/cmake/control_pkgConfig-version.cmake
+[13.927s] -- Up-to-date: /home/loaf/Pinocchio_ws/install/control_pkg/share/control_pkg/package.xml
+[13.929s] Invoked command in '/home/loaf/Pinocchio_ws/build/control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/loaf/Pinocchio_ws/build/control_pkg

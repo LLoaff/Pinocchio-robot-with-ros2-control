@@ -1,0 +1,10 @@
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/uninstall.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/mit_controllers_uninstall.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/mit_controllers.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/test.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/edit_cache.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/rebuild_cache.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/list_install_components.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/install.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/install/local.dir
+/home/loaf/Pinocchio_ws/build/mit_controllers/CMakeFiles/install/strip.dir

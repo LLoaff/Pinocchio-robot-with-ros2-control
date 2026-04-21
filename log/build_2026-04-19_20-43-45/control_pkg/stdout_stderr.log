@@ -1,0 +1,7 @@
+[35m[1mConsolidate compiler generated dependencies of target start[0m
+[  4%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o[0m
+[  8%] [32mBuilding CXX object CMakeFiles/start.dir/src/Gait/GaitGenerator.cpp.o[0m
+gmake[2]: *** [CMakeFiles/start.dir/build.make:314: CMakeFiles/start.dir/src/Gait/GaitGenerator.cpp.o] 中断
+gmake[2]: *** [CMakeFiles/start.dir/build.make:272: CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o] 中断
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/start.dir/all] 中断
+gmake: *** [Makefile:146: all] 中断

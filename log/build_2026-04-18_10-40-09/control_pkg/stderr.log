@@ -1,0 +1,20 @@
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:164[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Imu.h:7[m[K,
+                 from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/LowState.h:7[m[K,
+                 from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/Estimator.h:4[m[K,
+                 from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/ControlComponent.h:5[m[K,
+                 from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/include/FSM/Trotting_State.h:4[m[K,
+                 from [01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/Trotting_State.cpp:1[m[K:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘[01m[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<float, 12, 1>; Src = Eigen::Matrix<double, 12, 1>; Func = Eigen::internal::assign_op<float, double>][m[K’:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 12, 1>; Derived = Eigen::Matrix<float, 12, 1>][m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:594:19:[m[K   required from ‘[01m[KEigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 12, 1>; Derived = Eigen::Matrix<float, 12, 1>][m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:423:29:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 12, 1>; _Scalar = float; int _Rows = 12; int _Cols = 1; int _Options = 0; int _MaxRows = 12; int _MaxCols = 1][m[K’
+[01m[K/home/loaf/Pinocchio_ws/src/control_pkg/src/FSM/Trotting_State.cpp:203:18:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:888:3:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_MIXED_DIFFERENT_NUMERIC_TYPES__YOU_NEED_TO_USE_THE_CAST_METHOD_OF_MATRIXBASE_TO_CAST_NUMERIC_TYPES_EXPLICITLY
+  888 |   [01;31m[KEIGEN_CHECK_BINARY_COMPATIBILIY[m[K(Func,typename ActualDstTypeCleaned::Scalar,typename Src::Scalar);
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:888:3:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<float, double, Eigen::internal::assign_op<float, double> > >::value[m[K’ evaluates to false
+gmake[2]: *** [CMakeFiles/start.dir/build.make:272：CMakeFiles/start.dir/src/FSM/Trotting_State.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/start.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

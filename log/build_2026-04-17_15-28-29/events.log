@@ -1,0 +1,118 @@
+[0.000000] (-) TimerEvent: {}
+[0.000079] (-) JobUnselected: {'identifier': 'control_pkg'}
+[0.000093] (-) JobUnselected: {'identifier': 'descrip_pino'}
+[0.000103] (-) JobUnselected: {'identifier': 'motor_control_msgs'}
+[0.000118] (-) JobUnselected: {'identifier': 'mujoco_pkg'}
+[0.000192] (mit_controllers) JobQueued: {'identifier': 'mit_controllers', 'dependencies': OrderedDict([('motor_control_msgs', '/home/loaf/Pinocchio_ws/install/motor_control_msgs')])}
+[0.000399] (mit_controllers) JobStarted: {'identifier': 'mit_controllers'}
+[0.049932] (mit_controllers) JobProgress: {'identifier': 'mit_controllers', 'progress': 'cmake'}
+[0.052902] (mit_controllers) JobProgress: {'identifier': 'mit_controllers', 'progress': 'build'}
+[0.054510] (mit_controllers) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loaf/Pinocchio_ws/build/mit_controllers', '--', '-j24', '-l24'], 'cwd': '/home/loaf/Pinocchio_ws/build/mit_controllers', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-3141-44503.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1287'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '1733'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3141'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('JOURNAL_STREAM', '8:13592'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1706,unix/loaf:/tmp/.ICE-unix/1706'), ('INVOCATION_ID', '3f20f36aec1e4cfcb6468e83dc79e056'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/e0dfc8e3111eab7f0abd322a124d38a6/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-79d6a3323a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:44503'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/mit_controllers'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/loaf/Pinocchio_ws/install/motor_control_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble')]), 'shell': False}
+[0.099892] (-) TimerEvent: {}
+[0.110816] (mit_controllers) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.195592] (mit_controllers) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.200081] (-) TimerEvent: {}
+[0.217119] (mit_controllers) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.218480] (mit_controllers) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.221736] (mit_controllers) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.226928] (mit_controllers) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.233417] (mit_controllers) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.260070] (mit_controllers) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.261718] (mit_controllers) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.300216] (-) TimerEvent: {}
+[0.343237] (mit_controllers) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.400498] (-) TimerEvent: {}
+[0.426494] (mit_controllers) StdoutLine: {'line': b'-- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)\n'}
+[0.445789] (mit_controllers) StdoutLine: {'line': b'-- Found controller_interface: 2.53.1 (/opt/ros/humble/share/controller_interface/cmake)\n'}
+[0.500675] (-) TimerEvent: {}
+[0.531626] (mit_controllers) StdoutLine: {'line': b'-- Found motor_control_msgs: 0.0.0 (/home/loaf/Pinocchio_ws/install/motor_control_msgs/share/motor_control_msgs/cmake)\n'}
+[0.584527] (mit_controllers) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.594845] (mit_controllers) StdoutLine: {'line': b'-- Generating done\n'}
+[0.597425] (mit_controllers) StdoutLine: {'line': b'-- Build files have been written to: /home/loaf/Pinocchio_ws/build/mit_controllers\n'}
+[0.600829] (-) TimerEvent: {}
+[0.618969] (mit_controllers) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target mit_controllers\x1b[0m\n'}
+[0.644677] (mit_controllers) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/mit_controllers.dir/src/mit_controllers.cpp.o\x1b[0m\n'}
+[0.701021] (-) TimerEvent: {}
+[0.801319] (-) TimerEvent: {}
+[0.901701] (-) TimerEvent: {}
+[1.002015] (-) TimerEvent: {}
+[1.102352] (-) TimerEvent: {}
+[1.202682] (-) TimerEvent: {}
+[1.302989] (-) TimerEvent: {}
+[1.403318] (-) TimerEvent: {}
+[1.503568] (-) TimerEvent: {}
+[1.603846] (-) TimerEvent: {}
+[1.704175] (-) TimerEvent: {}
+[1.804423] (-) TimerEvent: {}
+[1.904765] (-) TimerEvent: {}
+[2.005027] (-) TimerEvent: {}
+[2.105350] (-) TimerEvent: {}
+[2.205618] (-) TimerEvent: {}
+[2.305864] (-) TimerEvent: {}
+[2.406195] (-) TimerEvent: {}
+[2.506518] (-) TimerEvent: {}
+[2.606825] (-) TimerEvent: {}
+[2.707156] (-) TimerEvent: {}
+[2.807430] (-) TimerEvent: {}
+[2.907753] (-) TimerEvent: {}
+[3.007995] (-) TimerEvent: {}
+[3.108233] (-) TimerEvent: {}
+[3.208454] (-) TimerEvent: {}
+[3.308892] (-) TimerEvent: {}
+[3.409350] (-) TimerEvent: {}
+[3.509576] (-) TimerEvent: {}
+[3.610050] (-) TimerEvent: {}
+[3.710497] (-) TimerEvent: {}
+[3.810755] (-) TimerEvent: {}
+[3.911035] (-) TimerEvent: {}
+[4.011309] (-) TimerEvent: {}
+[4.111602] (-) TimerEvent: {}
+[4.211861] (-) TimerEvent: {}
+[4.312212] (-) TimerEvent: {}
+[4.412462] (-) TimerEvent: {}
+[4.512719] (-) TimerEvent: {}
+[4.612952] (-) TimerEvent: {}
+[4.713182] (-) TimerEvent: {}
+[4.813435] (-) TimerEvent: {}
+[4.913782] (-) TimerEvent: {}
+[5.014024] (-) TimerEvent: {}
+[5.114293] (-) TimerEvent: {}
+[5.214511] (-) TimerEvent: {}
+[5.314832] (-) TimerEvent: {}
+[5.320008] (mit_controllers) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libmit_controllers.so\x1b[0m\n'}
+[5.414945] (-) TimerEvent: {}
+[5.515214] (-) TimerEvent: {}
+[5.615457] (-) TimerEvent: {}
+[5.665720] (mit_controllers) StdoutLine: {'line': b'[100%] Built target mit_controllers\n'}
+[5.673191] (mit_controllers) CommandEnded: {'returncode': 0}
+[5.673903] (mit_controllers) JobProgress: {'identifier': 'mit_controllers', 'progress': 'install'}
+[5.682224] (mit_controllers) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/loaf/Pinocchio_ws/build/mit_controllers'], 'cwd': '/home/loaf/Pinocchio_ws/build/mit_controllers', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'loaf'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loaf'), ('CHROME_DESKTOP', 'code.desktop'), ('CONDA_SHLVL', '0'), ('TERM_PROGRAM_VERSION', '1.113.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-3141-44503.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1287'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '1733'), ('BUNDLED_DEBUGPY_PATH', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/loaf/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3141'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'loaf'), ('JOURNAL_STREAM', '8:13592'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'loaf'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/loaf/miniconda3/condabin:/usr/local/bin:/opt/ros/humble/bin:/home/loaf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/loaf:@/tmp/.ICE-unix/1706,unix/loaf:/tmp/.ICE-unix/1706'), ('INVOCATION_ID', '3f20f36aec1e4cfcb6468e83dc79e056'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('MUJOCO_DIR', '/opt/mujoco'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/loaf/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-75da98c90dca5eb6.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/loaf/.config/Code/User/workspaceStorage/e0dfc8e3111eab7f0abd322a124d38a6/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-79d6a3323a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/loaf/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:44503'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/loaf/Pinocchio_ws/build/mit_controllers'), ('LC_ALL', 'zh_CN.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/loaf/miniconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/loaf/Pinocchio_ws/install/motor_control_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble')]), 'shell': False}
+[5.687625] (mit_controllers) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.687724] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/mit_controller_plugin.xml\n'}
+[5.689417] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/lib/libmit_controllers.so\n'}
+[5.692852] (mit_controllers) StdoutLine: {'line': b'-- Set runtime path of "/home/loaf/Pinocchio_ws/install/mit_controllers/lib/libmit_controllers.so" to ""\n'}
+[5.692912] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/include/include\n'}
+[5.692942] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/include/include/mit_controllers.hpp\n'}
+[5.692969] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/environment/library_path.sh\n'}
+[5.692999] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/environment/library_path.dsv\n'}
+[5.693051] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/ament_index/resource_index/package_run_dependencies/mit_controllers\n'}
+[5.693083] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/share/ament_index/resource_index/parent_prefix_path/mit_controllers\n'}
+[5.693143] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/environment/ament_prefix_path.sh\n'}
+[5.693190] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/environment/ament_prefix_path.dsv\n'}
+[5.693218] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/environment/path.sh\n'}
+[5.693241] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/environment/path.dsv\n'}
+[5.693267] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/local_setup.bash\n'}
+[5.693295] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/local_setup.sh\n'}
+[5.693326] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/local_setup.zsh\n'}
+[5.693353] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/local_setup.dsv\n'}
+[5.693420] (mit_controllers) StdoutLine: {'line': b'-- Installing: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/package.dsv\n'}
+[5.693449] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/ament_index/resource_index/packages/mit_controllers\n'}
+[5.693515] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/mit_controllers\n'}
+[5.693545] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.693574] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.693604] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/cmake/mit_controllersConfig.cmake\n'}
+[5.693660] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/cmake/mit_controllersConfig-version.cmake\n'}
+[5.693685] (mit_controllers) StdoutLine: {'line': b'-- Up-to-date: /home/loaf/Pinocchio_ws/install/mit_controllers/share/mit_controllers/package.xml\n'}
+[5.694877] (mit_controllers) CommandEnded: {'returncode': 0}
+[5.710064] (mit_controllers) JobEnded: {'identifier': 'mit_controllers', 'rc': 0}
+[5.710405] (-) EventReactorShutdown: {}
