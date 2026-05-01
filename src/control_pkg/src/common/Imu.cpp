@@ -94,6 +94,26 @@ float Imu::getDYaw(){
     return getGyroGlobal()(2);
 }
 
+float Imu::getRoll(){
+    float roll=0;
+    float w = quaternion[0];
+    float x = quaternion[1];
+    float y = quaternion[2];
+    float z = quaternion[3];
+
+    roll = atan2(2*(w*x + y*z),1-2*(x*x+y*y));
+    return roll;
+}
+float Imu::getPitch(){
+    float pitch=0;
+    float w = quaternion[0];
+    float x = quaternion[1];
+    float y = quaternion[2];
+    float z = quaternion[3];
+
+    pitch = asin(2*(w*y-z*x)) ;
+    return pitch;
+}
 Imu::~Imu(){
     _serial.close();
 }

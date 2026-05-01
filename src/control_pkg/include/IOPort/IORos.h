@@ -40,7 +40,7 @@ public:
     void SetD(int leg_id,Eigen::Matrix<float,3,1> d);
     void SetD(Eigen::Matrix<float,12,1> d);
     void SetZeroD();
-    void SetTau(Eigen::Matrix<float,12,1> tau);
+    void SetTau(Eigen::Matrix<float,12,1> tau,Eigen::Matrix<double,2,1> torqueLimit = Eigen::Matrix<double,2,1>(-2.3, 2.3));
     void SetTau(int leg_id,Eigen::Matrix<float,3,1> tau);
     void SetZeroTau(int legID);
     void SetZeroTau();

@@ -19,26 +19,22 @@ FeetEndCal::FeetEndCal(ControlComponent *ctrlComp)
 }
 
 Vec3 FeetEndCal::calFootPos(int legID, Vec2 vxyGoalGlobal, float dYawGoal, float phase){
-    _bodyVelGlobal = _est->getVelocity();
     
-    _bodyWGlobal = _lowState->_imu.getGyroGlobal().cast<double>();
-    // std::cout<<"VelGlobal:\n"<< _bodyVelGlobal<<std::endl;
-    // std::cout<<"WGlobal:\n"<< _bodyWGlobal<<std::endl;
-    
-    _nextStep(0) = _bodyVelGlobal(0)*(1-phase)*_Tswing + _bodyVelGlobal(0)*_Tstance/2 + _kx*(_bodyVelGlobal(0) - vxyGoalGlobal(0));
-    _nextStep(1) = _bodyVelGlobal(1)*(1-phase)*_Tswing + _bodyVelGlobal(1)*_Tstance/2 + _ky*(_bodyVelGlobal(1) - vxyGoalGlobal(1));
+    double Kvl = 0.5;
+    double Tsw = 0.25;
+    double Tst = 0.25;
+
+    double _x_line = Kvl*vxyGoalGlobal(0) * Tsw + 0.5*vxyGoalGlobal(0)*Tst;
+    double _y_line = Kvl*vxyGoalGlobal(1) * Tsw + 0.5*vxyGoalGlobal(1)*Tst;
+
+    double _x_yaw = -0.5*dYawGoal *Tst*_robModel->getFeetPosIdeal()(1,legID);
+    double _y_yaw = 0.5*dYawGoal *Tst*_robModel->getFeetPosIdeal()(0,legID);
+
+    _nextStep(0) = _robModel->getFeetPosIdeal()(0,legID)+_x_line+_x_yaw;
+    _nextStep(1) = _robModel->getFeetPosIdeal()(1,legID)+_y_line+_y_yaw;
     _nextStep(2) = 0;
 
-    _yaw = _lowState->_imu.getYaw();
-    _dYaw = _lowState->_imu.getDYaw();
-    _nextYaw = _dYaw*(1-phase)*_Tswing + _dYaw*_Tstance/2 + _kyaw*(dYawGoal - _dYaw);
-
-    _nextStep(0) += _feetRadius(legID) * cos(_yaw + _feetInitAngle(legID) + _nextYaw);  // 对应9.10 综合平移、转动的x轨迹方程
-    _nextStep(1) += _feetRadius(legID) * sin(_yaw + _feetInitAngle(legID) + _nextYaw);  // 对应9.10 综合平移、转动的y轨迹方程
-
-    // _footPos = _est->getPosition() + _nextStep;
     _footPos = _nextStep;
-    _footPos(2) = 0.0;
     // std::cout<<"_footPos:\n"<< _footPos<<std::endl;
 
     return _footPos;

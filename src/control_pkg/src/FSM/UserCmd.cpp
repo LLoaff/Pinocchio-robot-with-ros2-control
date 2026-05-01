@@ -2,7 +2,7 @@
 
 UserCmd::UserCmd()
 {
-    _serial.init("/dev/CH340",
+    _serial.init("/dev/ttyS3",
         100000 ,
         itas109::ParityEven,
         itas109::DataBits8,
@@ -99,9 +99,9 @@ UserValue UserCmd::GetUserValue()
     else if(R_Data.s1 == 1 && R_Data.s2 ==2){
         _user_value = UserValue::TROTTING;
     }
-    else if(R_Data.s1 == 1 && R_Data.s2 ==1){
-        _user_value = UserValue::BALANCE;
-    }
+    // else if(R_Data.s1 == 1 && R_Data.s2 ==1){
+    //     _user_value = UserValue::BALANCE;
+    // }
     pthread_mutex_lock(&_mutex);
     UserValue val = _user_value;
     pthread_mutex_unlock(&_mutex);

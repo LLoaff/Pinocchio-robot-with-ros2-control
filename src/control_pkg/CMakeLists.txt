@@ -7,8 +7,8 @@ project(control_pkg)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
-set(LOWSTATE_DEBUG ON)  # lowstate 数据调试
-set(LOWCMD_DEBUG ON)  # lowcmd 数据调试
+set(LOWSTATE_DEBUG OFF)  # lowstate 数据调试
+set(LOWCMD_DEBUG OFF)  # lowcmd 数据调试
 
 if(LOWSTATE_DEBUG)
     add_definitions(-DLOWSTATE_DEBUG)
@@ -24,7 +24,6 @@ find_package(trajectory_msgs REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(motor_control_msgs REQUIRED)
-
 
 add_executable(start src/start.cpp 
 src/common/BalanceCtrl.cpp src/common/Estimator.cpp src/common/Imu.cpp src/common/LowPassFilter.cpp src/common/Robot.cpp  
@@ -49,7 +48,8 @@ ament_target_dependencies(start
 
 target_link_libraries(
 start
-UnitreeMotorSDK_Linux64
+# UnitreeMotorSDK_Linux64
+UnitreeMotorSDK_Arm64
 cserialport
 quadprog
 )

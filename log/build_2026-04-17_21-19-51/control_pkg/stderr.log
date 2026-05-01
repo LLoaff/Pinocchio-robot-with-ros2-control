@@ -1,4 +1,0 @@
-gmake[2]: *** 正在删除文件“start”
-gmake[2]: *** [CMakeFiles/start.dir/build.make:551: start] 中断
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/start.dir/all] 中断
-gmake: *** [Makefile:146: all] 中断

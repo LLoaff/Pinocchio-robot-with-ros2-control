@@ -26,7 +26,7 @@ private:
     Eigen::Matrix<int,4,1>*      _conact;
     Eigen::Matrix<float,3,3>     _KP;
     Eigen::Matrix<float,3,3>     _KD;
-    float                        _duration = 170;
+    float                        _duration = 1000;
     float                        _percent  = 0;
 };
 #endif

@@ -21,9 +21,6 @@ void GaitGenerator::restart(){
 
 void GaitGenerator::run(Vec34 &feetPos, Vec34 &feetVel){
     if(_firstRun){
-        // _startP = _est->getFeetPos();
-    //  std::cout<<"_startP:\n"<< _startP<<std::endl;
-
         _startP = _robModel->getFeetPosIdeal();
         _firstRun = false;
     }

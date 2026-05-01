@@ -21,6 +21,8 @@ public:
     Eigen::Matrix<float,4,1> GetQuat();
     Eigen::Matrix<float,3,1> getAccGlobal();
     Eigen::Matrix<float,3,1> getGyroGlobal();
+    float getPitch();
+    float getRoll();
     float getYaw();
     float getDYaw();
 

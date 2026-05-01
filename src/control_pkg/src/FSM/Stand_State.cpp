@@ -6,28 +6,38 @@ _balance(stand_ctrl_comp->balCtrl),_conact(stand_ctrl_comp->_contact){}
 void Stand_State::enter()
 {
     Eigen::Matrix<float,3,1> dq,kp,kd,tau,speed;
-    // kp<< 2.0 , 2.0 , 3.5;
 
-    kp<< 160.0 , 160.0 , 200;
-    kd<< 30 , 30 , 30;
     dq<< 0, 0, 0;
-    speed<< 0.05,0.05,0.05;
+    speed<< 0,0,0;
     tau<< 0 , 0 ,0;
-    _target_xyz << 0,-0.1,-0.365,
-                   0, 0.1,-0.365,
-                   -0.04,-0.1,-0.365,
-                   -0.04, 0.1,-0.365;
+    _target_xyz << 0,-0.18,-0.365,
+                   0, 0.18,-0.365,
+                   -0.04,-0.18,-0.365,
+                   -0.04, 0.18,-0.365;
     // _target_xyz << 0.26,  0.26,  -0.3,  -0.3,
     //               -0.146,  0.146,  -0.146,  0.146,
     //               -0.365,-0.365,-0.365,-0.365;
 
-    _KP<< 180,  0 ,   0,
-          0 ,   180,  0,
-          0 ,   0 ,   180;
+    // kp<< 160.0 , 160.0 , 200;
+    // kd<< 30 , 30 , 30;
+    // _KP<< 180,  0 ,   0,
+    //       0 ,   180,  0,
+    //       0 ,   0 ,   180;
 
-    _KD<< 7, 0,    0,
-          0,   7,  0,
-          0,   0,   7;
+    // _KD<< 7, 0,    0,
+    //       0,   7,  0,
+    //       0,   0,   7;
+
+    kp<< 1.8 , 1.8 , 2.0;
+    kd<< 0.15 , 0.15, 0.15;
+    
+    _KP<< 8,  0 ,   0,
+          0 ,   8,  0,
+          0 ,   0 ,   8;
+
+    _KD<< 0.707, 0,    0,
+          0,   0.707,  0,
+          0,   0,   0.707;
     for(int i=0;i<4;i++)
     {   
 
@@ -71,7 +81,7 @@ void Stand_State::run(){
     // std::cout<< "target_q\n"<< target_q <<std::endl;
     
     _fstate_ctrl->_ioros->SetQ(target_q);
-    _fstate_ctrl->_ioros->SetTau(tau);
+    // _fstate_ctrl->_ioros->SetTau(tau);
     // std::cout<< "tau:\n"<< tau <<"---"<<std::endl;
     // std::cout<< "stand"<<std::endl;
     // auto r = rotMatToRPY (_fstate_ctrl->_ioros->_state._imu.GetRotMat());

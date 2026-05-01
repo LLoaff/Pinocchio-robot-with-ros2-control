@@ -15,6 +15,11 @@ IORos::IORos():Node("IORos"){
     _joint_cmd->dq.resize(12);
     _joint_cmd->tau.resize(12);
 
+    _state._imu.quaternion[0]=1;
+    _state._imu.quaternion[1]=0;
+    _state._imu.quaternion[2]=0;
+    _state._imu.quaternion[3]=0;
+    
     _joint_cmd-> q[0] =_state.Angle_Initialization_Variable.Right_Front_Hip_Angle_Init_Value;
     _joint_cmd-> q[1] =_state.Angle_Initialization_Variable.Right_Front_Thigh_Angle_Init_Value;
     _joint_cmd-> q[2] =_state.Angle_Initialization_Variable.Right_Front_Calf_Angle_Init_Value;
@@ -201,13 +206,14 @@ void IORos::SetZeroD(){
         _joint_cmd->kd[3*i+2] = 0;
     }
 }
-                                                                                                                    // -1.3, 1.3
-void IORos::SetTau(Eigen::Matrix<float,12,1> tau){
+                                                                                                                    // -2.3, 2.3
+void IORos::SetTau(Eigen::Matrix<float,12,1> tau,Eigen::Matrix<double,2,1> torqueLimit){
     for(int i(0); i<12; ++i){
         if(std::isnan(tau(i))){
             printf("[ERROR] The setTau function meets Nan\n");
+            exit(1);
         }
-        _joint_cmd-> tau[i] = tau(i);
+        _joint_cmd-> tau[i] = saturation(tau(i),torqueLimit);
     }
 }
 
@@ -252,12 +258,18 @@ void IORos::SetFree()
     SetZeroTau();
 }
 void IORos::setStableGain(int legID){
-    _joint_cmd->kp[legID*3+0] = 180;
-    _joint_cmd->kd[legID*3+0] = 20;
-    _joint_cmd->kp[legID*3+1] = 180;
-    _joint_cmd->kd[legID*3+1] = 20;
-    _joint_cmd->kp[legID*3+2] = 200;
-    _joint_cmd->kd[legID*3+2] = 20;
+    // _joint_cmd->kp[legID*3+0] = 180;
+    // _joint_cmd->kd[legID*3+0] = 30;
+    // _joint_cmd->kp[legID*3+1] = 180;
+    // _joint_cmd->kd[legID*3+1] = 30;
+    // _joint_cmd->kp[legID*3+2] = 200;
+    // _joint_cmd->kd[legID*3+2] = 30;
+    _joint_cmd->kp[legID*3+0] = 2.2;
+    _joint_cmd->kd[legID*3+0] = 0.15;
+    _joint_cmd->kp[legID*3+1] = 2.2;
+    _joint_cmd->kd[legID*3+1] = 0.15;
+    _joint_cmd->kp[legID*3+2] = 2.5;
+    _joint_cmd->kd[legID*3+2] = 0.15;
 }
 void IORos::setStableGain(){
     for(int i(0); i<4; ++i){
@@ -265,12 +277,18 @@ void IORos::setStableGain(){
     }
 }
 void IORos::setSwingGain(int legID){
-    _joint_cmd->kp[legID*3+0] = 200;
-    _joint_cmd->kd[legID*3+0] = 20;
-    _joint_cmd->kp[legID*3+1] = 200;
-    _joint_cmd->kd[legID*3+1] = 20;
-    _joint_cmd->kp[legID*3+2] = 220;
-    _joint_cmd->kd[legID*3+2] = 20;
+    // _joint_cmd->kp[legID*3+0] = 200;
+    // _joint_cmd->kd[legID*3+0] = 30;
+    // _joint_cmd->kp[legID*3+1] = 200;
+    // _joint_cmd->kd[legID*3+1] = 30;
+    // _joint_cmd->kp[legID*3+2] = 220;
+    // _joint_cmd->kd[legID*3+2] = 30;
+    _joint_cmd->kp[legID*3+0] = 0.3;
+    _joint_cmd->kd[legID*3+0] = 0.05;
+    _joint_cmd->kp[legID*3+1] = 0.3;
+    _joint_cmd->kd[legID*3+1] = 0.05;
+    _joint_cmd->kp[legID*3+2] = 0.3;
+    _joint_cmd->kd[legID*3+2] = 0.05;
 }
 IORos::~IORos(){
     rclcpp::shutdown();

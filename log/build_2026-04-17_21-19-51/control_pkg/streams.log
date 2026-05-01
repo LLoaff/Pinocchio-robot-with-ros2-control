@@ -1,9 +1,0 @@
-[0.008s] Invoking command in '/home/loaf/Pinocchio_ws/build/control_pkg': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24
-[0.044s] [35m[1mConsolidate compiler generated dependencies of target start[0m
-[0.081s] [  4%] [32mBuilding CXX object CMakeFiles/start.dir/src/FSM/Passive_State.cpp.o[0m
-[2.972s] [  8%] [32m[1mLinking CXX executable start[0m
-[3.785s] gmake[2]: *** 正在删除文件“start”
-[3.785s] gmake[2]: *** [CMakeFiles/start.dir/build.make:551: start] 中断
-[3.785s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/start.dir/all] 中断
-[3.785s] gmake: *** [Makefile:146: all] 中断
-[3.788s] Invoked command in '/home/loaf/Pinocchio_ws/build/control_pkg' returned '-2': CMAKE_PREFIX_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs:/home/loaf/Pinocchio_ws/install/mujoco_pkg:/home/loaf/Pinocchio_ws/install/mit_controllers:/home/loaf/Pinocchio_ws/install/control_pkg:/home/loaf/Pinocchio_ws/install/descrip_pino:/opt/ros/humble LD_LIBRARY_PATH=/home/loaf/Pinocchio_ws/install/motor_control_msgs/lib:/home/loaf/Pinocchio_ws/install/mit_controllers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loaf/Pinocchio_ws/build/control_pkg -- -j24 -l24

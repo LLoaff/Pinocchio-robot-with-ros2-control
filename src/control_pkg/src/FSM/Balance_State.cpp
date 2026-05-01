@@ -22,9 +22,10 @@ Balance_State::Balance_State(ControlComponent * balance_ctrl_comp,LowState* lows
 
 void Balance_State::enter(){
     Eigen::Matrix<float,3,1> kp,kd;
-    kp<< 100 , 100 , 120;
-    kd<< 7 , 7 , 7;
-
+    // kp<< 100 , 100 , 120;
+    // kd<< 7 , 7 , 7;
+     kp<< 2 , 2 , 3.2;
+    kd<< 0.7 , 0.7 , 0.7;
     for(int i=0;i<4;i++)
     {
         _fstate_ctrl->_ioros->SetP(i,kp);

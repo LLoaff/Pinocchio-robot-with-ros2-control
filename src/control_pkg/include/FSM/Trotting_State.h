@@ -42,6 +42,8 @@ private:
     Vec3    _vCmdGlobal, _vCmdBody;
     double  _yawCmd, _dYawCmd;                              // _yawCmd:累积转过的角度  _dYawCmd:遥控器控制的期望转动速度
     double  _dYawCmdPast;
+    double  _vxCmdPast;
+    double  _vyCmdPast;
     Vec3    _wCmdGlobal;
     Vec34   _posFeetGlobalGoal, _velFeetGlobalGoal;
     Vec34   _posFeet2BGoal, _velFeet2BGoal;
